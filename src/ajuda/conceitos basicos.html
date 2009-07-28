@@ -1,0 +1,160 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="BrOffice.org 2.4  (Win32)">
+	<META NAME="AUTHOR" CONTENT="Karina Kieling">
+	<META NAME="CREATED" CONTENT="20081004;17110200">
+	<META NAME="CHANGEDBY" CONTENT="Karina Kieling">
+	<META NAME="CHANGED" CONTENT="20081101;22275210">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { margin: 2cm }
+		P { margin-bottom: 0.21cm }
+		P.western { so-language: pt-BR }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="pt-BR" DIR="LTR">
+<P STYLE="margin-bottom: 0cm; line-height: 150%"></P>
+<P STYLE="margin-bottom: 0cm; line-height: 150%"></P>
+<P STYLE="margin-bottom: 0cm; line-height: 150%"><B>CONCEITOS B&Aacute;SICOS</B></P>
+<P CLASS="western"><BR><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%">	Para
+melhor compreens&atilde;o dos assuntos abordados, ser&atilde;o
+apresentados nesta se&ccedil;&atilde;o conceitos gerais sobre as
+linguagens que servir&atilde;o para fundamentar o estudo de todos os
+tipos de linguagens:</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%"><BR><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%"><B>	S&iacute;mbolos</B>:
+s&atilde;o os elementos que comp&otilde;em uma linguagem. Letras e
+d&iacute;gitos s&atilde;o exemplos de s&iacute;mbolos freq&uuml;entemente
+usados.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%"><BR><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%"><B>	Alfabeto</B>:
+defini-se com sendo um conjunto de s&iacute;mbolos finito e n&atilde;o-vazio
+(HOPCROFT, ULLMAN, MOTWANI, 2003).  Segundo MENEZES (2001) alfabeto &eacute;
+uma entidade abstrata b&aacute;sica, n&atilde;o sendo definida
+formalmente. Normalmente &eacute; utilizado o s&iacute;mbolo <FONT FACE="Symbol, serif">&#61523;</FONT>
+para representar o alfabeto.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%">	Exemplos
+de alfabetos:	</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%"><FONT FACE="Symbol, serif">		&#61523;</FONT>
+= {0,1) &ndash; alfabeto bin&aacute;rio</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%"><FONT FACE="Symbol, serif">		&#61523;</FONT>
+= {a, b, ...., z} &ndash; conjunto de todas letras min&uacute;sculas.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%">	Na
+Linguagem de Programa&ccedil;&atilde;o como o Pascal, por exemplo, o
+alfabeto &eacute; todo o conjunto de s&iacute;mbolos usados na
+constru&ccedil;&atilde;o do programa, incluindo letras, d&iacute;gitos,
+caracteres especiais como &ldquo;&gt;&rdquo;, &ldquo;/&rdquo; e
+espa&ccedil;o ou branco (MENEZES, 2001).</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%"><BR><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%"><B>	Palavra</B>:
+&eacute; uma seq&uuml;&ecirc;ncia finita de s&iacute;mbolos
+escolhidos de um determinado alfabeto (HOPCROFT, ULLMAN, MOTWANI,
+2003).</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%">	Exemplo
+de palavras:</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%">		Se temos
+o <FONT FACE="Symbol, serif">&#61523;</FONT> = (a,b,c), ent&atilde;o
+abcb &eacute; uma palavra deste alfabeto.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%">	O tamanho
+da palavra e a quantidade de s&iacute;mbolos que possui, j&aacute; no
+caso das cadeias vazias o tamanho &eacute; zero. Por exemplo:</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%"><BR><BR>
+</P>
+<P CLASS="western" ALIGN=CENTER STYLE="line-height: 150%">| abbc| = 4</P>
+<P CLASS="western" ALIGN=CENTER STYLE="line-height: 150%">| <FONT FACE="Symbol, serif">&#61541;</FONT>
+| = 0</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%"><BR><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%">	Prefixo
+de uma palavra &eacute; o n&uacute;mero qualquer de s&iacute;mbolos
+tomados de seu inicio, j&aacute; sufixo &eacute; o n&uacute;mero
+qualquer tomado de seu fim. Podemos citar o seguinte exemplo sobre
+prefixo e sufixo:</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%">	Tendo a
+seguinte palavra abcb sobre o <FONT FACE="Symbol, serif">&#61523;</FONT>
+= (a,b,c) temos:</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%">	Os
+prefixos: <FONT FACE="Symbol, serif">&#61541;</FONT>, a, ab, abc,
+abcb</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%">	Os
+sufixos: <FONT FACE="Symbol, serif">&#61541;</FONT>,b, cb, bcb, abcb.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%">	Na
+Linguagem de programa&ccedil;&atilde;o como o Pascal, por exemplo,
+uma palavra &eacute; um programa (MENEZES, 2001).</P>
+<P CLASS="western" STYLE="line-height: 150%"><BR><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%"><B>	Concatena&ccedil;&atilde;o
+de palavras</B>: opera&ccedil;&atilde;o bin&aacute;ria, a partir da
+defini&ccedil;&atilde;o de um conjunto de palavras, associa-se a cada
+par de palavras uma palavra formada pela justaposi&ccedil;&atilde;o
+da primeira com a segunda (MENEZES, 2001).</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%">	Exemplo
+de concatena&ccedil;&atilde;o:</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%">		Seja o <FONT FACE="Symbol, serif">&#61669;</FONT>
+= {a,b} e para as palavras v=baaaa e w=bb, temos:</P>
+<P CLASS="western" ALIGN=CENTER>v w = baaaabb</P>
+<P CLASS="western" ALIGN=CENTER>v <FONT FACE="Symbol, serif">&#61541;</FONT>
+= v = baaaa</P>
+<P CLASS="western"><BR><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%"><B>	Concatena&ccedil;&atilde;o
+sucessiva de uma palavra</B>: &eacute; a concatena&ccedil;&atilde;o
+da palavra com ela mesma n-1 vezes, ou a repeti&ccedil;&atilde;o da
+mesma n vezes.  A forma de representa&ccedil;&atilde;o &eacute; feita
+por um expoente, que &eacute; o n&uacute;mero de concatena&ccedil;&atilde;o
+sucessivas (MENEZES, 2001)</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%">	Exemplo:</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%"> 		Suponha
+W uma palavra e a um s&iacute;mbolo, ent&atilde;o:</P>
+<P CLASS="western" ALIGN=CENTER><SPAN LANG="en-US">W</SPAN><SPAN LANG="en-US">&sup3;</SPAN><SPAN LANG="en-US">
+= WWW</SPAN></P>
+<P LANG="en-US" CLASS="western" ALIGN=CENTER>W&sup1; = W</P>
+<P LANG="en-US" CLASS="western" ALIGN=CENTER>a5 =  aaaaa</P>
+<P LANG="en-US" CLASS="western"><BR><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%"><B>	Pot&ecirc;ncias
+de um alfabeto</B>: sendo <FONT FACE="Symbol, serif">&#61669;</FONT>
+um alfabeto, podemos expressar o conjunto de todas as palavras de um
+certo comprimento a parte desse alfabeto, usando a nota&ccedil;&atilde;o
+exponencial (HOPCROFT, ULLMAN, MOTWANI, 2003).  Devemos definir o
+conjunto das palavras, o comprimento, e os s&iacute;mbolos deles deve
+pertencer a um <FONT FACE="Symbol, serif">&#61669;</FONT>. Exemplo:</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%">		Temos <FONT FACE="Symbol, serif">&#61669;</FONT>
+= { 0,1}, ent&atilde;o.</P>
+<P CLASS="western" ALIGN=CENTER>&#61669;1 = {0, 1}</P>
+<P CLASS="western" ALIGN=CENTER>&#61669;2 = {00, 01, 10, 11}</P>
+<P CLASS="western" ALIGN=CENTER><BR><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%"><B>	Linguagem</B>:
+&eacute; um conjunto de cadeias de s&iacute;mbolos que recebem de
+algum alfabeto. Hopcroft, Ullman e Motwani (2003) afirmam que
+linguagem &eacute; um conjunto de palavras,  todos escolhidos a
+partir de um <FONT FACE="Symbol, serif">&#61669;</FONT>*,  onde <FONT FACE="Symbol, serif">&#61669;</FONT>
+&eacute; um alfabeto especifico. Se <FONT FACE="Symbol, serif">&#61669;</FONT>
+&eacute; um alfabeto, e L <FONT FACE="Symbol, serif">&#61645;</FONT>
+<FONT FACE="Symbol, serif">&#61669;</FONT>*, ent&atilde;o L &eacute;
+uma linguagem sobre <FONT FACE="Symbol, serif">&#61669;</FONT>.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%"><BR><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%"><BR><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0cm; line-height: 150%">
+<IMG SRC="conceitos%20basicos_html_m637a0871.gif" ALIGN=MIDDLE>
+<A HREF="Indice.html">Voltar &Iacute;ndice</A></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0cm; line-height: 150%">
+<BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0cm; line-height: 150%">
+<BR>
+</P>
+</BODY>
+</HTML>
