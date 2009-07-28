@@ -1,0 +1,467 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="BrOffice.org 2.4  (Win32)">
+	<META NAME="AUTHOR" CONTENT="Karina Kieling">
+	<META NAME="CREATED" CONTENT="20080925;23451000">
+	<META NAME="CHANGEDBY" CONTENT="Karina Kieling">
+	<META NAME="CHANGED" CONTENT="20081101;17432568">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { margin: 2cm }
+		P { margin-bottom: 0.21cm }
+		P.western { so-language: pt-BR }
+		TD P { margin-bottom: 0cm }
+		TD P.western { so-language: pt-BR }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="pt-BR" DIR="LTR">
+<P CLASS="western" STYLE="margin-bottom: 0cm; line-height: 150%"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; line-height: 150%"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; line-height: 150%"><B>ESPECIFICA&Ccedil;&Otilde;ES
+L&Eacute;XICAS</B></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; line-height: 150%">	O
+Sintelo permite que o <A HREF="analise_lexica.html">analisador l&eacute;xico</A>
+seja gerado de duas forma, apenas ele, ou seja, o usu&aacute;rio
+declara somente os <A HREF="token.html">tokens</A> e as <A HREF="expressoes_regulares.html">express&otilde;es
+regulares</A>, conforme exemplo:</P>
+<P CLASS="western"><BR><BR>
+</P>
+<P CLASS="western" STYLE="line-height: 150%"><IMG SRC="definicoes%20da%20analise%20lexica_html_44e2bda6.png" NAME="figura1" ALIGN=MIDDLE WIDTH=466 HEIGHT=363 BORDER=0>	</P>
+<P CLASS="western" STYLE="line-height: 150%">	Ou em conjunto com o
+<A HREF="analise_sintatica.html">analisador sint&aacute;tico</A>,
+onde o usu&aacute;rio faz a declara&ccedil;&atilde;o dos tokens e das
+defini&ccedil;&otilde;es regulares e tamb&eacute;m a defini&ccedil;&atilde;o
+da gram&aacute;tica utilizada, conforme segue exemplo:</P>
+<P CLASS="western"><BR><BR>
+</P>
+<P CLASS="western"><IMG SRC="definicoes%20da%20analise%20lexica_html_m63ead9b6.png" NAME="figura2" ALIGN=MIDDLE WIDTH=466 HEIGHT=363 BORDER=0></P>
+<P CLASS="western">	</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%">	As
+declara&ccedil;&otilde;es devem ser por linha e n&atilde;o &eacute;
+permitido que haja duplicidade na declara&ccedil;&atilde;o, sendo
+informado aos usu&aacute;rio quando isso ocorrer.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%">	Os tokens
+podem ser um identificador ou uma seq&uuml;&ecirc;ncia de caracteres
+entre &ldquo;&rdquo; (aspas), cada token deve ser declarado em um
+linha.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%">	A
+express&atilde;o regular &eacute; a seq&uuml;&ecirc;ncia de
+caracteres a ser reconhecidos. Os espa&ccedil;os em brancos no meio
+de um express&atilde;o s&atilde;o ignorados. Os caracteres especias
+s&atilde;o aqueles que dentro da express&otilde;es atuam como
+operadores ou caracteres de controle, s&atilde;o ele:</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%"><BR><BR>
+</P>
+<DL>
+	<DL>
+		<DL>
+			<DL>
+				<DD>
+				<TABLE WIDTH=650 BORDER=1 BORDERCOLOR="#000000" CELLPADDING=4 CELLSPACING=0>
+					<COL WIDTH=298>
+					<COL WIDTH=334>
+					<TR VALIGN=TOP>
+						<TD WIDTH=298>
+							<P CLASS="western" ALIGN=CENTER><B>Caracteres</B></P>
+						</TD>
+						<TD WIDTH=334>
+							<P CLASS="western" ALIGN=CENTER><B>Defini&ccedil;&atilde;o</B></P>
+						</TD>
+					</TR>
+					<TR VALIGN=TOP>
+						<TD WIDTH=298>
+							<P CLASS="western" ALIGN=CENTER>&ldquo;</P>
+						</TD>
+						<TD WIDTH=334>
+							<P CLASS="western" ALIGN=CENTER>aspas</P>
+						</TD>
+					</TR>
+					<TR VALIGN=TOP>
+						<TD WIDTH=298>
+							<P CLASS="western" ALIGN=CENTER>\</P>
+						</TD>
+						<TD WIDTH=334>
+							<P CLASS="western" ALIGN=CENTER>Barra evertida</P>
+						</TD>
+					</TR>
+					<TR VALIGN=TOP>
+						<TD WIDTH=298>
+							<P CLASS="western" ALIGN=CENTER>|</P>
+						</TD>
+						<TD WIDTH=334>
+							<P CLASS="western" ALIGN=CENTER>Barra vertical</P>
+						</TD>
+					</TR>
+					<TR VALIGN=TOP>
+						<TD WIDTH=298>
+							<P CLASS="western" ALIGN=CENTER>*</P>
+						</TD>
+						<TD WIDTH=334>
+							<P CLASS="western" ALIGN=CENTER>asterisco</P>
+						</TD>
+					</TR>
+					<TR VALIGN=TOP>
+						<TD WIDTH=298>
+							<P CLASS="western" ALIGN=CENTER>+</P>
+						</TD>
+						<TD WIDTH=334>
+							<P CLASS="western" ALIGN=CENTER>soma</P>
+						</TD>
+					</TR>
+					<TR VALIGN=TOP>
+						<TD WIDTH=298>
+							<P CLASS="western" ALIGN=CENTER>?</P>
+						</TD>
+						<TD WIDTH=334>
+							<P CLASS="western" ALIGN=CENTER>interroga&ccedil;&atilde;o</P>
+						</TD>
+					</TR>
+					<TR VALIGN=TOP>
+						<TD WIDTH=298>
+							<P CLASS="western" ALIGN=CENTER>( )</P>
+						</TD>
+						<TD WIDTH=334>
+							<P CLASS="western" ALIGN=CENTER>Abre e fecha parentes</P>
+						</TD>
+					</TR>
+					<TR VALIGN=TOP>
+						<TD WIDTH=298>
+							<P CLASS="western" ALIGN=CENTER>[ ]</P>
+						</TD>
+						<TD WIDTH=334>
+							<P CLASS="western" ALIGN=CENTER>Abre e fecha colchetes</P>
+						</TD>
+					</TR>
+					<TR VALIGN=TOP>
+						<TD WIDTH=298>
+							<P CLASS="western" ALIGN=CENTER>.</P>
+						</TD>
+						<TD WIDTH=334>
+							<P CLASS="western" ALIGN=CENTER>ponto</P>
+						</TD>
+					</TR>
+					<TR VALIGN=TOP>
+						<TD WIDTH=298>
+							<P CLASS="western" ALIGN=CENTER>^</P>
+						</TD>
+						<TD WIDTH=334>
+							<P CLASS="western" ALIGN=CENTER>circunflexo</P>
+						</TD>
+					</TR>
+					<TR VALIGN=TOP>
+						<TD WIDTH=298>
+							<P CLASS="western" ALIGN=CENTER>-</P>
+						</TD>
+						<TD WIDTH=334>
+							<P CLASS="western" ALIGN=CENTER>menos</P>
+						</TD>
+					</TR>
+				</TABLE>
+			</DL>
+		</DL>
+	</DL>
+</DL>
+<P CLASS="western"><BR><BR>
+</P>
+<P CLASS="western" STYLE="line-height: 150%">	A utiliza&ccedil;&atilde;o
+destes caracteres que n&atilde;o forem de forma especial deve ser
+colocado entre &ldquo;&rdquo; (aspas), ou precedido de \ (barra
+invertida). Assim sendo, todos caracteres utilizados entre aspas s&atilde;o
+tratados como caracteres normais. Existem ainda os caracteres que n&atilde;o
+se tem uma representa&ccedil;&atilde;o, como nova linha, por isso s&atilde;o
+utilizados as seguintes defini&ccedil;&otilde;es:</P>
+<DL>
+	<DL>
+		<DL>
+			<DL>
+				<DD>
+				<TABLE WIDTH=650 BORDER=1 BORDERCOLOR="#000000" CELLPADDING=4 CELLSPACING=0>
+					<COL WIDTH=298>
+					<COL WIDTH=334>
+					<TR VALIGN=TOP>
+						<TD WIDTH=298>
+							<P CLASS="western" ALIGN=CENTER><B>Caracteres</B></P>
+						</TD>
+						<TD WIDTH=334>
+							<P CLASS="western" ALIGN=CENTER><B>Defini&ccedil;&atilde;o</B></P>
+						</TD>
+					</TR>
+					<TR VALIGN=TOP>
+						<TD WIDTH=298>
+							<P CLASS="western" ALIGN=CENTER>\n\r</P>
+						</TD>
+						<TD WIDTH=334>
+							<P CLASS="western" ALIGN=CENTER>Nova linha</P>
+						</TD>
+					</TR>
+					<TR VALIGN=TOP>
+						<TD WIDTH=298>
+							<P CLASS="western" ALIGN=CENTER>\s</P>
+						</TD>
+						<TD WIDTH=334>
+							<P CLASS="western" ALIGN=CENTER>Espa&ccedil;o</P>
+						</TD>
+					</TR>
+					<TR VALIGN=TOP>
+						<TD WIDTH=298>
+							<P CLASS="western" ALIGN=CENTER>\t</P>
+						</TD>
+						<TD WIDTH=334>
+							<P CLASS="western" ALIGN=CENTER>tabula&ccedil;&atilde;o</P>
+						</TD>
+					</TR>
+				</TABLE>
+			</DL>
+		</DL>
+	</DL>
+</DL>
+<P CLASS="western"><BR><BR>
+</P>
+<P CLASS="western" STYLE="line-height: 150%">	Para definir as classes
+de caracteres s&atilde;o utilizados os [ ] e ^ , onde o primeiro
+significa o conjunto de caracteres, exemplo [a-z], que qualquer
+caracter pertencente a este s&atilde;o reconhecidos e no segundo a
+nega&ccedil;&atilde;o do conjunto de caracteres, exemplo [^A-Z],
+reconhece qualquer caracteres exceto aqueles que estejam no conjunto.
+Alguns exemplos das classes mais utilizadas:</P>
+<P CLASS="western" STYLE="line-height: 150%"><BR><BR>
+</P>
+<DL>
+	<DL>
+		<DL>
+			<DL>
+				<DD>
+				<TABLE WIDTH=650 BORDER=1 BORDERCOLOR="#000000" CELLPADDING=4 CELLSPACING=0>
+					<COL WIDTH=298>
+					<COL WIDTH=334>
+					<TR VALIGN=TOP>
+						<TD WIDTH=298>
+							<P CLASS="western" ALIGN=CENTER><B>Express&otilde;es</B></P>
+						</TD>
+						<TD WIDTH=334>
+							<P CLASS="western" ALIGN=CENTER><B>Reconhecido</B></P>
+						</TD>
+					</TR>
+					<TR VALIGN=TOP>
+						<TD WIDTH=298>
+							<P CLASS="western" ALIGN=CENTER>[a-z]</P>
+						</TD>
+						<TD WIDTH=334>
+							<P CLASS="western" ALIGN=CENTER>Reconhece qualquer letra
+							min&uacute;scula</P>
+						</TD>
+					</TR>
+					<TR VALIGN=TOP>
+						<TD WIDTH=298>
+							<P CLASS="western" ALIGN=CENTER>[a-zA-z]</P>
+						</TD>
+						<TD WIDTH=334>
+							<P CLASS="western" ALIGN=CENTER>Reconhece qualquer letra
+							min&uacute;scula e mai&uacute;scula 
+							</P>
+						</TD>
+					</TR>
+					<TR VALIGN=TOP>
+						<TD WIDTH=298>
+							<P CLASS="western" ALIGN=CENTER>[0-9]</P>
+						</TD>
+						<TD WIDTH=334>
+							<P CLASS="western" ALIGN=CENTER>Reconhece qualquer d&iacute;gito</P>
+						</TD>
+					</TR>
+					<TR VALIGN=TOP>
+						<TD WIDTH=298>
+							<P CLASS="western" ALIGN=CENTER>[^123]</P>
+						</TD>
+						<TD WIDTH=334>
+							<P CLASS="western" ALIGN=CENTER>Reconhecedor qualquer digito
+							exceto 123</P>
+						</TD>
+					</TR>
+					<TR VALIGN=TOP>
+						<TD WIDTH=298>
+							<P CLASS="western" ALIGN=CENTER>[d-f]</P>
+						</TD>
+						<TD WIDTH=334>
+							<P CLASS="western" ALIGN=CENTER>Reconhecedor as letras d, e, f</P>
+						</TD>
+					</TR>
+				</TABLE>
+			</DL>
+		</DL>
+	</DL>
+</DL>
+<P CLASS="western"><BR><BR>
+</P>
+<P CLASS="western" STYLE="line-height: 150%">	Para representar a
+uni&atilde;o, ou seja, que em duas determinadas express&otilde;es
+qualquer uma poder&aacute; ser reconhecida utilizamos o operador |
+(barra vertical). 	Exemplo:</P>
+<DL>
+	<DL>
+		<DL>
+			<DL>
+				<DD>
+				<TABLE WIDTH=650 BORDER=1 BORDERCOLOR="#000000" CELLPADDING=4 CELLSPACING=0>
+					<COL WIDTH=298>
+					<COL WIDTH=334>
+					<TR VALIGN=TOP>
+						<TD WIDTH=298>
+							<P CLASS="western" ALIGN=CENTER><B>Express&atilde;o</B></P>
+						</TD>
+						<TD WIDTH=334>
+							<P CLASS="western" ALIGN=CENTER><B>Reconhece</B></P>
+						</TD>
+					</TR>
+					<TR VALIGN=TOP>
+						<TD WIDTH=298>
+							<P CLASS="western" ALIGN=CENTER>ab|dc</P>
+						</TD>
+						<TD WIDTH=334>
+							<P CLASS="western" ALIGN=CENTER>ab ou dc</P>
+						</TD>
+					</TR>
+					<TR VALIGN=TOP>
+						<TD WIDTH=298>
+							<P CLASS="western" ALIGN=CENTER>a(a|c)</P>
+						</TD>
+						<TD WIDTH=334>
+							<P CLASS="western" ALIGN=CENTER>aa ou ac</P>
+						</TD>
+					</TR>
+				</TABLE>
+			</DL>
+		</DL>
+	</DL>
+</DL>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="line-height: 150%">	Em determinadas
+express&atilde;o s&atilde;o utilizadas os operadores +, * e ?, que
+servem para como o elemento da express&atilde;o de aparecer, conforme
+o que segue:</P>
+<P CLASS="western" STYLE="line-height: 150%"><BR><BR>
+</P>
+<DL>
+	<DL>
+		<DL>
+			<DL>
+				<DD>
+				<TABLE WIDTH=649 BORDER=1 BORDERCOLOR="#000000" CELLPADDING=4 CELLSPACING=0>
+					<COL WIDTH=297>
+					<COL WIDTH=335>
+					<TR VALIGN=TOP>
+						<TD WIDTH=297>
+							<P CLASS="western" ALIGN=CENTER><B>Operador</B></P>
+						</TD>
+						<TD WIDTH=335>
+							<P CLASS="western" ALIGN=CENTER><B>Significado</B></P>
+						</TD>
+					</TR>
+					<TR VALIGN=TOP>
+						<TD WIDTH=297>
+							<P CLASS="western" ALIGN=CENTER>+</P>
+						</TD>
+						<TD WIDTH=335>
+							<P CLASS="western" ALIGN=CENTER>Pelo menos uma vez</P>
+						</TD>
+					</TR>
+					<TR VALIGN=TOP>
+						<TD WIDTH=297>
+							<P CLASS="western" ALIGN=CENTER>*</P>
+						</TD>
+						<TD WIDTH=335>
+							<P CLASS="western" ALIGN=CENTER>Zero ou mais vezes</P>
+						</TD>
+					</TR>
+					<TR VALIGN=TOP>
+						<TD WIDTH=297>
+							<P CLASS="western" ALIGN=CENTER>?</P>
+						</TD>
+						<TD WIDTH=335>
+							<P CLASS="western" ALIGN=CENTER>Pode ou n&atilde;o aparecer</P>
+						</TD>
+					</TR>
+				</TABLE>
+			</DL>
+		</DL>
+	</DL>
+</DL>
+<P CLASS="western"> 
+</P>
+<P CLASS="western">		Por exemplo:</P>
+<DL>
+	<DL>
+		<DL>
+			<DL>
+				<DD>
+				<TABLE WIDTH=649 BORDER=1 BORDERCOLOR="#000000" CELLPADDING=4 CELLSPACING=0>
+					<COL WIDTH=297>
+					<COL WIDTH=335>
+					<TR VALIGN=TOP>
+						<TD WIDTH=297>
+							<P CLASS="western" ALIGN=CENTER><B>Express&otilde;es</B></P>
+						</TD>
+						<TD WIDTH=335>
+							<P CLASS="western" ALIGN=CENTER><B>Significado</B></P>
+						</TD>
+					</TR>
+					<TR VALIGN=TOP>
+						<TD WIDTH=297>
+							<P CLASS="western" ALIGN=CENTER>[0-9]+</P>
+						</TD>
+						<TD WIDTH=335>
+							<P CLASS="western" ALIGN=CENTER>Reconhece uma ou mais vezes os
+							elementos do conjunto</P>
+						</TD>
+					</TR>
+					<TR VALIGN=TOP>
+						<TD WIDTH=297>
+							<P CLASS="western" ALIGN=CENTER>a*</P>
+						</TD>
+						<TD WIDTH=335>
+							<P CLASS="western" ALIGN=CENTER>Reconhece zero ou mais a's</P>
+						</TD>
+					</TR>
+					<TR VALIGN=TOP>
+						<TD WIDTH=297>
+							<P CLASS="western" ALIGN=CENTER>[a-z]?</P>
+						</TD>
+						<TD WIDTH=335>
+							<P CLASS="western" ALIGN=CENTER>Reconhece os elementos do
+							conjunto ou nenhum</P>
+						</TD>
+					</TR>
+				</TABLE>
+			</DL>
+		</DL>
+	</DL>
+</DL>
+<P CLASS="western"><BR><BR>
+</P>
+<P CLASS="western"><BR><BR>
+</P>
+<P CLASS="western"><BR><BR>
+</P>
+<P CLASS="western"><BR><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><IMG SRC="definicoes%20da%20analise%20lexica_html_m637a0871.gif" ALIGN=MIDDLE>
+<A HREF="Indice.html">Voltar &Iacute;ndice</A></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+</BODY>
+</HTML>
