@@ -59,7 +59,7 @@ public class TelaSobre extends javax.swing.JDialog {
         jTextArea1.setColumns(20);
         jTextArea1.setEditable(false);
         jTextArea1.setRows(5);
-        jTextArea1.setText("\nKarina Kieling dos Santos\nPhilipe Marcon dos Reis\n\nOrientador: Luiz Alfredo Soares Garcindo, Dr.\nCurso de Ciência da Computação\nUNISUL - Universidade do Sul de Santa Catarina");
+        jTextArea1.setText("\nv. 1.0.0\n\nKarina Kieling dos Santos\nPhilipe Marcon dos Reis\n\nOrientador: Luiz Alfredo Soares Garcindo, Dr.\nCurso de Ciência da Computação\nUNISUL - Universidade do Sul de Santa Catarina");
         jTextArea1.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         jTextArea1.setEnabled(false);
         jTextArea1.setOpaque(false);
