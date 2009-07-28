@@ -1,0 +1,178 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="BrOffice.org 2.4  (Win32)">
+	<META NAME="AUTHOR" CONTENT="Karina Kieling">
+	<META NAME="CREATED" CONTENT="20081004;17251000">
+	<META NAME="CHANGEDBY" CONTENT="Karina Kieling">
+	<META NAME="CHANGED" CONTENT="20081101;22252668">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { margin: 2cm }
+		P { margin-bottom: 0.21cm }
+		P.western { so-language: pt-BR }
+		P.lista-western { so-language: pt-BR }
+		P.lista-ctl { font-family: "Tahoma" }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="pt-BR" DIR="LTR">
+<P STYLE="margin-bottom: 0cm; line-height: 150%; page-break-before: always">
+</P>
+<P STYLE="margin-bottom: 0cm; line-height: 150%"></P>
+<P STYLE="margin-bottom: 0cm; line-height: 150%"><FONT SIZE=3><B>COMPILADORES</B></FONT></P>
+<P CLASS="western"><BR><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%">	Compiladores
+s&atilde;o programas que traduzem programas escritos em uma linguagem
+(c&oacute;digo fonte) para outra (c&oacute;digo alvo), geralmente de
+uma linguagem de alto n&iacute;vel para outra de baixo n&iacute;vel,
+como instru&ccedil;&otilde;es de um processador. Al&eacute;m de
+traduzir de uma linguagem para outra, o compilador vai verificar a
+exist&ecirc;ncia de erros no c&oacute;digo fonte (AHO; ULLMAN, 1995).
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%">
+	Normalmente, o processo de compila&ccedil;&atilde;o &eacute;
+composto por algumas fases, sendo elas:</P>
+<UL>
+	<LI><P CLASS="lista-western"><A HREF="analise_lexica.html">An&aacute;lise
+	l&eacute;xica</A>;</P>
+	<LI><P CLASS="lista-western"><A HREF="analise_sintatica.html">An&aacute;lise
+	sint&aacute;tica</A>;</P>
+	<LI><P CLASS="lista-western"><A HREF="analise_semantica.html">An&aacute;lise
+	sem&acirc;ntica</A>;</P>
+	<LI><P CLASS="lista-western"><A HREF="gera%C3%A7ao%20de%20codigo.html">Gera&ccedil;&atilde;o
+	de c&oacute;digo</A>.</P>
+</UL>
+<P CLASS="lista-western"><SPAN ID="Quadro8" DIR="LTR" STYLE="float: left; width: 15cm; height: 18.31cm; border: none; padding: 0cm; background: #ffffff">
+	<P STYLE="margin-bottom: 0cm; font-style: normal"><IMG SRC="compilador_html_1d60b09f.png" NAME="figura8" ALIGN=BOTTOM WIDTH=567 HEIGHT=651 BORDER=0><FONT FACE="Times, serif"><FONT SIZE=2>Figura
+	1: Fases da compila&ccedil;&atilde;o</FONT></FONT></P>
+	<P STYLE="margin-bottom: 0cm; font-style: normal"><FONT FACE="Times, serif"><FONT SIZE=2>Fonte:
+	Aho; Sethi; Ullman (1995, p. 5)</FONT></FONT></P>
+</SPAN><BR CLEAR=LEFT><BR><BR>
+</P>
+<P CLASS="lista-western" ALIGN=JUSTIFY STYLE="line-height: 150%">	Louden
+(2004) explana que as fases da compila&ccedil;&atilde;o podem ser
+entendidas como pe&ccedil;as separadas dentro do compilador, que
+podem efetivamente ser escritas como opera&ccedil;&otilde;es 
+separadas, embora na pr&aacute;tica elas sejam freq&uuml;entemente
+agrupadas.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%">	Cada fase
+pode gerar uma representa&ccedil;&atilde;o intermedi&aacute;ria do
+c&oacute;digo fonte. Os compiladores podem executar completamente uma
+fase, gerar uma representa&ccedil;&atilde;o intermedi&aacute;ria, a
+qual ser&aacute; passada para a pr&oacute;xima fase, e assim
+sucessivamente. Esses s&atilde;o chamados de compiladores de m&uacute;ltipla
+passagem. Mas muitos compiladores, por quest&otilde;es de efici&ecirc;ncia,
+executam gradativamente todas as fases da compila&ccedil;&atilde;o,
+conforme avan&ccedil;am no c&oacute;digo fonte. Estes s&atilde;o
+chamados de compiladores de passagem simples.</P>
+<P CLASS="western"><BR><BR>
+</P>
+<P STYLE="margin-bottom: 0cm; font-weight: medium; line-height: 150%">
+HIST&Oacute;RIA DA COMPILA&Ccedil;&Atilde;O</P>
+<P CLASS="western"> 
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%">	No final
+da d&eacute;cada de 1940 John Von Neuman desenvolveu os primeiros
+computadores armazenadores de programas, com esta evolu&ccedil;&atilde;o
+surgiu a necessidade de escrever seq&uuml;&ecirc;ncias de c&oacute;digo,
+ou programas, para que os computadores realizasses os comandos
+desejados. Os primeiros programas eram escritos em foram de linguagem
+de maquina (c&oacute;digo num&eacute;rico), mas este tipo de c&oacute;digo
+consome muito tempo e &eacute; muito cansativo. Por este motivo longo
+este tipo de codifica&ccedil;&atilde;o foi substitu&iacute;da pela
+linguagem de montagem, onde as instru&ccedil;&otilde;es e endere&ccedil;os
+de mem&oacute;ria adotam uma forma simb&oacute;lica.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%">	As
+vantagens da linguagem de montagem s&atilde;o que aumentam muito a
+velocidade e a precis&atilde;o com que os programas podem ser
+escritos, e s&atilde;o utilizadas ainda hoje, principalmente quando
+muita velocidade ou concis&atilde;o de c&oacute;digo s&atilde;o
+necess&aacute;rias. Mas a linguagem de montagem tamb&eacute;m possui
+alguns defeitos, este tipo de c&oacute;digo n&atilde;o &eacute; f&aacute;cil
+de escrever e &eacute; dif&iacute;cil de ler e entender o que esta
+escrito e possui um depend&ecirc;ncia da m&aacute;quina, ou seja, o
+c&oacute;digo que escrito para um determinado computador precisa ser
+modificado para outro.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%">	O pr&oacute;ximo
+grande objetivo era facilitar o modo como eram escritas as <A HREF="linguagens_programacao.html">linguagens
+de programa&ccedil;&atilde;o</A>, numa forma mais clara e f&aacute;cil
+de compreender e escrever, uma linguagem que fosse mais semelhante
+com a linguagem natural ou nota&ccedil;&atilde;o matem&aacute;tica e
+que n&atilde;o dependesse de uma m&aacute;quina particular.
+Inicialmente se julgou que isso seria imposs&iacute;vel, ou que se
+fosse poss&iacute;vel o c&oacute;digo objeto seria t&atilde;o
+ineficiente que seria in&uacute;til. Mas em meados de 1954 o
+desenvolvimento da linguagem Fortran e de seu compilador pelo um
+grupo da IBM, afastou este pensamente.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%">	O
+desenvolvimento dos primeiros compiladores foi coincidentemente na
+mesma &eacute;poca que Noam Chomsky iniciou o estudo da estrutura da
+linguagem natural, onde os resultados alcan&ccedil;ados por Chomsky
+tornaram a constru&ccedil;&atilde;o dos compiladores bem mais simples
+e em parte automatizados. Em seus estudos Chomsky classificava as
+linguagens de acordo com a complexidade de sua <A HREF="gramatica.html">gram&aacute;ticas</A>
+e o poder dos algoritmos necess&aacute;rios para reconhece - l&aacute;.
+A hierarquia Chomsky como foi chamado o estudo das gram&aacute;ticas,
+foi dividida em quatro n&iacute;veis, tipo 0, tipo 1, tipo 2 e tipo
+3.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%">	Para a
+linguagem de programa&ccedil;&atilde;o as gram&aacute;tica do tipo 2,
+tamb&eacute;m denominada gram&aacute;tica livre de contexto, s&atilde;o
+as mais &uacute;teis e atualmente s&atilde;o a forma padr&atilde;o de
+representar a estrutura da linguagem de programa&ccedil;&atilde;o.
+Entre 1960 e 1970 foi estudado o problema da an&aacute;lise
+sint&aacute;tica, que determina qual &eacute; o algoritmo mais
+eficiente para reconhecer linguagens livres de contexto, a resolu&ccedil;&atilde;o
+deste &eacute; bastante complexa e hoje faz parte da teoria da
+computa&ccedil;&atilde;o.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%">	Aut&ocirc;matos
+e <A HREF="expressoes_regulares.html">express&otilde;es regulares</A>
+s&atilde;o assuntos relacionados com as gram&aacute;ticas livres de
+contexto, estas correspondem ao do tipo 3. No estudo destes temas
+Chomsky, levou o m&eacute;todo simb&oacute;lico para expressar a
+estrutura das palavras de uma linguagem de programa&ccedil;&atilde;o.
+Na gera&ccedil;&atilde;o de c&oacute;digo o desenvolvimento de  um
+c&oacute;digo fonte eficiente, assunto bem mais complexo, tem sido
+estudado desde que os primeiros compiladores surgiram.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%">	No
+problema da an&aacute;lise sint&aacute;tica, foram estudadas v&aacute;rias
+formas de programas para automatizar essa parte do desenvolvimento do
+compilador, inicialmente estes programas receberam a denomina&ccedil;&atilde;o
+de compilador para compilador, mas s&atilde;o mais bem identificados
+como geradores de analisadores sint&aacute;ticos, pois conseguem
+automatizar somente uma parte do processo de compila&ccedil;&atilde;o.
+J&aacute; no estudo de aut&ocirc;matos finitos levaram ao
+desenvolvimento de outra ferramenta, conhecida como gerador de
+sistema de varredura. 
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%">	Com o
+avan&ccedil;o dos projetos voltados &agrave; &aacute;rea de
+compiladores se obtive resultados significantes, onde estes t&ecirc;m
+incorporados algoritmos mais sofisticados para infer&ecirc;ncia de
+informa&ccedil;&otilde;es contidas em um programa. Como exemplo disto
+pode-se destacar o algoritmo de Hindley-Milner para verifica&ccedil;&atilde;o
+de tipos, utilizados na compila&ccedil;&atilde;o de linguagens
+funcionais. Os compiladores est&atilde;o cada vez mais fazendo parte
+do ambiente de desenvolvimento interativo baseados em janelas (IDE),
+onde estes cont&ecirc;m editores, organizadores, depuradores e
+gerenciadores de projetos. 
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%"><BR><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%"><BR><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0cm; line-height: 150%">
+<IMG SRC="compilador_html_m637a0871.gif" ALIGN=MIDDLE> <A HREF="Indice.html">Voltar
+&Iacute;ndice</A></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0cm; line-height: 150%">
+<BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0cm; line-height: 150%">
+<BR>
+</P>
+</BODY>
+</HTML>

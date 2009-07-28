@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="BrOffice.org 2.4  (Win32)">
+	<META NAME="AUTHOR" CONTENT="Karina Kieling">
+	<META NAME="CREATED" CONTENT="20080929;10900">
+	<META NAME="CHANGEDBY" CONTENT="Karina Kieling">
+	<META NAME="CHANGED" CONTENT="20081101;21413571">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { margin: 2cm }
+		P { margin-bottom: 0.21cm }
+		P.western { so-language: pt-BR }
+		P.lista-western { so-language: pt-BR }
+		P.lista-ctl { font-family: "Tahoma" }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="pt-BR" DIR="LTR">
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm; line-height: 150%"></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm; line-height: 150%"></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm; line-height: 150%"><B>TOKEN</B></P>
+<P CLASS="western"><BR><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%">	O
+<A HREF="analise_lexica.html">analisador l&eacute;xico</A> tem a
+fun&ccedil;&atilde;o de ler uma seq&uuml;&ecirc;ncia de caracteres
+que constitui um programa fonte e coletar, dessa seq&uuml;&ecirc;ncia,
+os tokens que constituem o programa fonte. Price e Toscani (2001)
+descrevem que cada token &eacute; representado internamente por tr&ecirc;s
+informa&ccedil;&otilde;es:</P>
+<OL>
+	<LI><P CLASS="lista-western" ALIGN=JUSTIFY STYLE="line-height: 150%">
+	Classe do token &ndash; representa o tipo de tokens reconhecidos.
+	Exemplos: identificadores, constantes num&eacute;ricas, cadeias de
+	caracteres, palavras reservadas, operadores e separadores.</P>
+	<LI><P CLASS="lista-western" ALIGN=JUSTIFY STYLE="line-height: 150%">
+	Valor do token &ndash; depende da classe associada, por exemplo,
+	para um token da classe inteira o valor do token pode ser o n&uacute;mero
+	inteiro representado pela constante. Mas para algumas classes de
+	token, como as palavras reservadas, n&atilde;o t&ecirc;m valor
+	associado.</P>
+	<LI><P CLASS="lista-western" ALIGN=JUSTIFY STYLE="line-height: 150%">
+	Posi&ccedil;&atilde;o do token &ndash; indica o local do texto fonte
+	onde ocorreu o token, esta informa&ccedil;&atilde;o &eacute;
+	utilizada para identificar o local onde ocorreu erros.</P>
+</OL>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%">	Os tokens
+identificados pelo analisador l&eacute;xico ser&aacute; utilizado
+como entrada para o <A HREF="analise_sintatica.html">analisador
+sint&aacute;tico</A>, segunda fase da compila&ccedil;&atilde;o, mas o
+programa fonte mesmo sendo o mesmo tanto no l&eacute;xico quando no
+sint&aacute;tico possui senten&ccedil;a de linguagens diferentes. No
+l&eacute;xico o programa fonte &eacute; uma seq&uuml;&ecirc;ncia de
+palavras de uma linguagem regular, j&aacute; no sint&aacute;tico, a
+seq&uuml;&ecirc;ncia de tokens constitui uma senten&ccedil;a de uma
+<A HREF="glc_llc.html">linguagens livre de contexto</A> (PRICE;
+TOSCANI, 2001).</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%"><BR><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0cm; line-height: 150%">
+<IMG SRC="token_html_m637a0871.gif" ALIGN=MIDDLE> <A HREF="Indice.html">Voltar
+&Iacute;ndice</A></P>
+<P CLASS="western" STYLE="line-height: 150%"><BR><BR>
+</P>
+<P CLASS="western" STYLE="line-height: 150%"><BR><BR>
+</P>
+</BODY>
+</HTML>

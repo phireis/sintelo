@@ -1,0 +1,212 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="BrOffice.org 2.4  (Win32)">
+	<META NAME="AUTHOR" CONTENT="Karina Kieling">
+	<META NAME="CREATED" CONTENT="20081004;16525300">
+	<META NAME="CHANGEDBY" CONTENT="Karina Kieling">
+	<META NAME="CHANGED" CONTENT="20081101;22121565">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { margin: 2cm }
+		P { margin-bottom: 0.21cm }
+		P.western { so-language: pt-BR }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="pt-BR" DIR="LTR">
+<P STYLE="margin-bottom: 0cm; line-height: 150%"></P>
+<P STYLE="margin-bottom: 0cm; line-height: 150%"></P>
+<P STYLE="margin-bottom: 0cm; line-height: 150%"><B>ANALISADOR
+ASCENDENTES</B></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%"><BR><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%">	A an&aacute;lise
+ascendente tem como objetivo construir a &aacute;rvore de deriva&ccedil;&atilde;o
+a partir das folhas, assim produzido uma deriva&ccedil;&atilde;o mais
+&agrave; direita. Este tipo de an&aacute;lise tamb&eacute;m &eacute;
+conhecidos como an&aacute;lise de empilhar e reduzir. O processo de
+reconhecimento consiste em transferir s&iacute;mbolos da senten&ccedil;a
+de entrada para a pilha at&eacute; que se tenha um lado de produ&ccedil;&atilde;o,
+assim que isso ocorrer, este lado direito &eacute; reduzido pelo
+s&iacute;mbolo do lado esquerdo da produ&ccedil;&atilde;o. Todo este
+processo avan&ccedil;a at&eacute; que a senten&ccedil;a segue ao seu
+fim, e reste somente o s&iacute;mbolo inicial da gram&aacute;tica na
+pilha, caso que a senten&ccedil;a &eacute; aceita (PRICE; TOSCANI,
+2001).</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%"><BR><BR>
+</P>
+<P STYLE="margin-bottom: 0cm; font-weight: medium; line-height: 150%">
+<I>An&aacute;lise sint&aacute;tico LR</I></P>
+<P CLASS="western"><BR><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%">	Os
+analisador sint&aacute;tico LR faz a leitura da senten&ccedil;a de
+entrada da esquerda para a direita e constroem um deriva&ccedil;&atilde;o
+mais a direita na ordem inversa. Segundo Gesser (2001) estes
+analisadores possuem uma estrutura de reconhecimento muito eficiente
+e poderosa. A gram&aacute;tica reconhecida por os analisadores LR s&atilde;o
+denominadas Gram&aacute;tica LR, e esta s&atilde;o capazes de
+reconhecer todos tipos de estrutura sint&aacute;ticas definidas pela
+gram&aacute;tica livre de contexto, linguagem reconhecidas por
+analisador LL tamb&eacute;m s&atilde;o reconhecidas por um analisador
+LR.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%">	O 
+analisador LR possui uma entrada onde s&atilde;o lidos os caracteres,
+uma pilha que armazena s&iacute;mbolos da gram&aacute;ticas, que
+intercala com estados do analisador, e &eacute; dirigido por uma
+tabela de an&aacute;lise. Esta tabela sint&aacute;ticas consiste de
+duas partes, denominada a&ccedil;&otilde;es, que tem a  fun&ccedil;&atilde;o
+de a&ccedil;&otilde;es sint&aacute;ticas e outras desvio que tem como
+fun&ccedil;&atilde;o de desviar (AHO; SETHI; ULLMAN, 1995).  
+</P>
+<P CLASS="western"><SPAN ID="Quadro17" DIR="LTR" STYLE="float: left; width: 14.95cm; height: 8.73cm; border: none; padding: 0cm; background: #ffffff">
+	<P STYLE="margin-bottom: 0cm; font-style: normal"><IMG SRC="analisador%20ascendente_html_2a58cd9f.png" NAME="figura17" ALIGN=LEFT WIDTH=100% BORDER=0><BR CLEAR=LEFT><FONT FACE="Times, serif"><FONT SIZE=2>Figura
+	1: Modelo de analisador sint&aacute;tico LR</FONT></FONT></P>
+	<P STYLE="margin-bottom: 0cm; font-style: normal"><FONT FACE="Times, serif"><FONT SIZE=2>Fonte:
+	AHO; SETHI; ULLMAN, 1995.</FONT></FONT></P>
+</SPAN><BR CLEAR=LEFT><BR><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%">	Algoritmo
+de an&aacute;lise sint&aacute;ticas LR:</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%">	Entrada.
+Uma cadeia de entrada w e uma tabela sint&aacute;tica com as suas
+a&ccedil;&otilde;es e desvio para uma gram&aacute;tica G.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%">	Sa&iacute;da.
+Se w estiver em L(G), uma decomposi&ccedil;&atilde;o ascendente para
+w; em caso contr&aacute;rio, uma indica&ccedil;&atilde;o de erro.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%">	M&eacute;todo.
+Inicialmente, o analisador sint&aacute;tico possui s0 na pilha, onde
+s0 &eacute; o estado inicial, e w$ no buffer de entrada. O analisador
+sint&aacute;tico executa o programa de an&aacute;lise sint&aacute;tica
+at&eacute; que a uma a&ccedil;&atilde;o de aceita&ccedil;&atilde;o ou
+erro seja atingida.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%"><FONT COLOR="#000000">	Segundo
+Gesser (2001) o lado negativo deste tipo de analisador esta na
+utiliza&ccedil;&atilde;o excessiva de espa&ccedil;o ocupado pelas
+tabelas, como exemplo, uma linguagens pequena, o n&uacute;mero de
+estados pode chegar &agrave; casa dos milhares. </FONT>
+</P>
+<P CLASS="western"><BR><BR>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0cm; font-weight: medium; line-height: 150%">
+<I>An&aacute;lise Sint&aacute;ticas SLR</I></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%"><BR><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%">	A an&aacute;lise
+sint&aacute;ticas SLR(1), ou LR simples, utiliza o DFA de conjuntos
+de itens LR(0), aumentando o poder desta an&aacute;lise de forma
+muito significativa, pois utiliza o caracter seguinte na cadeia de
+entrada para dirigir suas a&ccedil;&otilde;es. Isso &eacute; feito de
+duas maneira, onde a primeira consulta o caracter de entrada antes de
+carregar, para garantir que exista uma transi&ccedil;&atilde;o
+apropriada no DFA. No segundo utiliza-se o conjunto First e Follow de
+um n&atilde;o-terminal, para decidir se uma redu&ccedil;&atilde;o
+deve ser efetuada. <FONT FACE="Times New Roman, serif"><SPAN STYLE="font-weight: medium">A
+an&aacute;lise sint&aacute;tica SLR e a mais f&aacute;cil de ser
+implementada</SPAN></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%">	A
+defini&ccedil;&atilde;o do algoritmo da an&aacute;lise sint&aacute;tica
+SLR(1), sendo que s e o estado corrente (LOUDEN, 2004):</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%">	Entrada:
+se o estado s contiver um item na forma A ::= <FONT FACE="Symbol, serif">&#61537;
+.</FONT><FONT FACE="Times New Roman, serif">X</FONT><FONT FACE="Symbol, serif"><SPAN STYLE="font-weight: medium">&#61538;</SPAN></FONT><FONT FACE="Times New Roman, serif"><B>,
+</B></FONT><FONT FACE="Times New Roman, serif"><SPAN STYLE="font-weight: medium">onde
+X &eacute; um terminal, e X for um caracter seguinte da cadeia de
+entrada, ent&atilde;o a a&ccedil;&atilde;o carrega o caracter de
+entrada corrente para a pilha, e o novo estado a ser colocado na
+pilha &eacute; o estado que contem o item A ::= </SPAN></FONT><FONT FACE="Symbol, serif"><SPAN STYLE="font-weight: medium">&#61537;
+.</SPAN></FONT><FONT FACE="Times New Roman, serif"><SPAN STYLE="font-weight: medium">X</SPAN></FONT><FONT FACE="Symbol, serif"><SPAN STYLE="font-weight: medium">&#61538;</SPAN></FONT><FONT FACE="Times New Roman, serif"><B>.</B></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%"><FONT FACE="Times New Roman, serif"><SPAN STYLE="font-weight: medium">	Se
+o estado s contiver o item completo A ::= </SPAN></FONT>&gamma;<FONT FACE="Times New Roman, serif"><FONT SIZE=4 STYLE="font-size: 15pt"><B>.
+</B></FONT></FONT><FONT FACE="Times New Roman, serif"><SPAN STYLE="font-weight: medium">e
+o caracter seguinte da cadeia de entrada no Follow(A), ent&atilde;o a
+a&ccedil;&atilde;o reduzir pela regra A::= &gamma;. Uma redu&ccedil;&atilde;o
+pela regra S'::= S, onde S &eacute; o estado inicial, &eacute;
+equivalente a aceita&ccedil;&atilde;o; isso ocorrer&aacute; apenas se
+o caracter de entrada seguinte for $ (cifr&atilde;o). Em todos os
+outros casos, o novo estado &eacute; computado da maneira descrita a
+seguir. Remova a cadeia &gamma; e todos os estados correspondentes da
+pilha de an&aacute;lise sint&aacute;tica. 	De forma correspondente,
+retorne no DFA para o estado do in&iacute;cio da constru&ccedil;&atilde;o
+de &gamma;. Por constru&ccedil;&atilde;o, esse estado deve conter um
+item da forma B::=</SPAN></FONT><FONT FACE="Symbol, serif"><SPAN STYLE="font-weight: medium">&#61537;
+</SPAN></FONT><FONT FACE="Symbol, serif"><FONT SIZE=4><B>.</B></FONT></FONT><FONT FACE="Times New Roman, serif"><SPAN STYLE="font-weight: medium">A</SPAN></FONT><FONT FACE="Symbol, serif"><SPAN STYLE="font-weight: medium">&#61538;.
+</SPAN></FONT><FONT FACE="Times New Roman, serif"><SPAN STYLE="font-weight: medium">Coloque
+A na pilha, e tamb&eacute;m coloque o estado que cont&eacute;m o item
+B::= </SPAN></FONT><FONT FACE="Symbol, serif"><SPAN STYLE="font-weight: medium">&#61537;
+</SPAN></FONT><FONT FACE="Times New Roman, serif"><SPAN STYLE="font-weight: medium">A</SPAN></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=4><B>.</B></FONT></FONT><FONT FACE="Symbol, serif"><SPAN STYLE="font-weight: medium">&#61538;.</SPAN></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="font-weight: medium; line-height: 150%">
+<FONT FACE="Times New Roman, serif">	Se o caracter de entrada
+seguinte for tal que nenhum dos casos acima se aplique, uma mensagem
+de erro &eacute; apresentada.</FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="font-weight: medium; line-height: 150%">
+<BR><BR>
+</P>
+<P ALIGN=JUSTIFY STYLE="margin-bottom: 0cm; font-weight: medium; line-height: 150%">
+<FONT FACE="Times New Roman, serif"><I>An&aacute;lise Sint&aacute;ticas
+LALR(1)</I></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%"><BR><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%"><FONT FACE="Times New Roman, serif">	O
+ m&eacute;todo de an&aacute;lise sint&aacute;ticas LALR(1) &eacute;
+normalmente utilizada porque as tabelas obtidas s&atilde;o
+consideradas menores do que as tabelas LR can&ocirc;nicas, e al&eacute;m
+disso, a maioria das constru&ccedil;&otilde;es sint&aacute;ticas
+comuns das linguagens de programa&ccedil;&atilde;o pode ser
+expressada corretamente por gram&aacute;ticas LALR(1) (AHO; SETHI;
+ULLMAN, 1995). </FONT>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%">	O
+algoritmo para a constru&ccedil;&atilde;o da tabela LALR(1) &eacute;
+definida <FONT FACE="Times New Roman, serif">(AHO; SETHI; ULLMAN,
+1995).</FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%"><FONT FACE="Times New Roman, serif">	Entrada:
+uma gram&aacute;tica G.</FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%"><FONT FACE="Times New Roman, serif">	Sa&iacute;da:
+As fun&ccedil;&otilde;es da tabela sint&aacute;tica LALR a&ccedil;&atilde;o
+e desvio para G.</FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%"><FONT FACE="Times New Roman, serif">	M&eacute;todo:</FONT></P>
+<OL>
+	<LI><P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%"><FONT SIZE=3><FONT FACE="Times New Roman, serif">Construir
+	C = {I</FONT><FONT FACE="Times New Roman, serif">0</FONT><FONT FACE="Times New Roman, serif">,
+	I</FONT><FONT FACE="Times New Roman, serif">1</FONT><FONT FACE="Times New Roman, serif">,...,I</FONT><FONT FACE="Times New Roman, serif">n</FONT><FONT FACE="Times New Roman, serif">},
+	a cole&ccedil;&atilde;o de itens LR(1).</FONT></FONT></P>
+	<LI><P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>Para
+	cada n&uacute;cleo presente entre os conjuntos de itens LR(1),
+	encontrar todos os conjuntos que tenham o mesmo n&uacute;cleo e
+	substitu&iacute;-lo por uma uni&atilde;o.</FONT></FONT></P>
+	<LI><P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%"><FONT SIZE=3><FONT FACE="Times New Roman, serif">Seja
+	C' = {J</FONT><FONT FACE="Times New Roman, serif">1</FONT><FONT FACE="Times New Roman, serif">,
+	J</FONT><FONT FACE="Times New Roman, serif">2</FONT><FONT FACE="Times New Roman, serif">,...,
+	J</FONT><FONT FACE="Times New Roman, serif">m</FONT><FONT FACE="Times New Roman, serif">}
+	os conjuntos resultantes do passo 2. O conte&uacute;do da tabela
+	a&ccedil;&atilde;o para o estado i &eacute; definido de Ji da mesma
+	forma que o algoritmo para a constru&ccedil;&atilde;o da tabela
+	LR(1). Se existir um conflito o algoritmo falha e a gram&aacute;tica
+	n&atilde;o &eacute; LALR(1).</FONT></FONT></P>
+	<LI><P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%"><FONT SIZE=3><FONT FACE="Times New Roman, serif">A
+	tabela desvio &eacute; constru&iacute;da a partir de J, J =
+	resultado da uni&atilde;o entre o conjunto de itens I1, I2, ..., IK.
+	Ent&atilde;o, os n&uacute;cleos dos desvios (I1, X), desvio (I2,
+	X)..., desvio (Ik, X) s&atilde;o os mesmos. Ent&atilde;o K= desvio
+	(J,X).</FONT></FONT></P>
+</OL>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%"><BR><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%"><BR><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0cm; line-height: 150%">
+<IMG SRC="analisador%20ascendente_html_m637a0871.gif" ALIGN=MIDDLE>
+<FONT SIZE=3><FONT FACE="Times New Roman, serif"><A HREF="Indice.html">Voltar
+&Iacute;ndice</A></FONT></FONT></P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0cm; line-height: 150%">
+<BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0cm; line-height: 150%">
+<BR>
+</P>
+</BODY>
+</HTML>

@@ -1,0 +1,471 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="BrOffice.org 2.4  (Win32)">
+	<META NAME="AUTHOR" CONTENT="Karina Kieling">
+	<META NAME="CREATED" CONTENT="20081101;18014637">
+	<META NAME="CHANGEDBY" CONTENT="Karina Kieling">
+	<META NAME="CHANGED" CONTENT="20081101;18083779">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { margin: 2cm }
+		P { margin-bottom: 0.21cm }
+		P.western { so-language: pt-BR }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="pt-BR" DIR="LTR">
+<P STYLE="margin-bottom: 0cm; font-weight: medium; line-height: 150%">
+</P>
+<P STYLE="margin-bottom: 0cm; font-weight: medium; line-height: 150%">
+</P>
+<P STYLE="margin-bottom: 0cm; font-style: normal; line-height: 150%"><B>An&aacute;lise
+sint&aacute;tica LL(1)</B></P>
+<P CLASS="western" STYLE="line-height: 150%"><BR><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%">	A an&aacute;lise
+sint&aacute;tica LL(1) utilizam pilha expl&iacute;cita e uma tabela
+de an&aacute;lise, onde a tabela d&aacute; a regra a ser utilizada,
+se possuir, no elemento do topo da pilha. Ou seja, o algoritmo do
+analisador olha para o pr&oacute;ximo s&iacute;mbolo na entrada, e
+para o s&iacute;mbolo no topo da pilha, se o topo da pilha for um
+terminal, e igual ao da entrada, o s&iacute;mbolo &eacute;
+reconhecido, sen&atilde;o &eacute; gerado um erro, ser for um
+n&atilde;o-terminal, se tenta encontrar na tabela alguma transi&ccedil;&atilde;o,
+ se possuir, a produ&ccedil;&atilde;o &eacute; jogada na pilha, sen&atilde;o
+possuir, um erro &eacute; gerado 
+</P>
+<P CLASS="western" STYLE="line-height: 150%">	Exemplo (PRICE;
+TOSCANI, 2001)</P>
+<P CLASS="western" STYLE="line-height: 150%">	Tendo a gram&aacute;tica:</P>
+<P CLASS="western" STYLE="line-height: 150%">	E ::= E v T | T</P>
+<P CLASS="western" STYLE="line-height: 150%">	T ::= T &amp; F | F</P>
+<P CLASS="western" STYLE="line-height: 150%">	F ::= <FONT FACE="AppleGothic, DejaVu Sans">&not;</FONT>
+F | id</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%">	Eliminando-se
+a recurs&atilde;o a esquerda das produ&ccedil;&otilde;es E e T, e tem
+se:</P>
+<P CLASS="western" STYLE="line-height: 150%">	E ::=  T E'</P>
+<P CLASS="western" STYLE="line-height: 150%">	E'::= v T E'| <FONT FACE="Symbol, serif">&#61541;</FONT></P>
+<P CLASS="western" STYLE="line-height: 150%"><FONT FACE="Symbol, serif">	&#61524;&#61472;&#61498;&#61498;&#61501;&#61472;</FONT><FONT FACE="Times New Roman, serif">F
+T'</FONT></P>
+<P CLASS="western" STYLE="line-height: 150%"><FONT FACE="Times New Roman, serif">	T'::=
+&amp; F T'| </FONT><FONT FACE="Symbol, serif">&#61541;</FONT></P>
+<P CLASS="western" STYLE="line-height: 150%"><FONT FACE="Times New Roman, serif">	F
+::= </FONT><FONT FACE="AppleGothic, DejaVu Sans">&not;</FONT> F | id</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%">	A tabela
+de parse para esta gram&aacute;tica &eacute; definida como:</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm; font-style: normal">     
+<FONT SIZE=2>Tabela 1 Tabela de parse</FONT></P>
+<DL>
+	<DD>
+	<TABLE WIDTH=831 BORDER=1 BORDERCOLOR="#000000" CELLPADDING=7 CELLSPACING=0 STYLE="page-break-after: avoid">
+		<COL WIDTH=96>
+		<COL WIDTH=129>
+		<COL WIDTH=126>
+		<COL WIDTH=141>
+		<COL WIDTH=138>
+		<COL WIDTH=114>
+		<TR VALIGN=TOP>
+			<TD WIDTH=96>
+				<P CLASS="western"><BR>
+				</P>
+			</TD>
+			<TD WIDTH=129>
+				<P CLASS="western" ALIGN=CENTER><FONT FACE="Times New Roman, serif"><B>Id</B></FONT></P>
+			</TD>
+			<TD WIDTH=126>
+				<P CLASS="western" ALIGN=CENTER><FONT FACE="Times New Roman, serif"><B>v</B></FONT></P>
+			</TD>
+			<TD WIDTH=141>
+				<P CLASS="western" ALIGN=CENTER><FONT FACE="Times New Roman, serif"><B>&amp;</B></FONT></P>
+			</TD>
+			<TD WIDTH=138>
+				<P CLASS="western" ALIGN=CENTER><FONT FACE="AppleGothic, DejaVu Sans"><B>&not;</B></FONT></P>
+			</TD>
+			<TD WIDTH=114>
+				<P CLASS="western" ALIGN=CENTER><FONT FACE="Times New Roman, serif"><B>$</B></FONT></P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=96>
+				<P CLASS="western"><FONT FACE="Times New Roman, serif"><B>E</B></FONT></P>
+			</TD>
+			<TD WIDTH=129>
+				<P CLASS="western">E ::=  T E`</P>
+			</TD>
+			<TD WIDTH=126>
+				<P CLASS="western"><BR>
+				</P>
+			</TD>
+			<TD WIDTH=141>
+				<P CLASS="western"><BR>
+				</P>
+			</TD>
+			<TD WIDTH=138>
+				<P CLASS="western">E ::=  T E`</P>
+			</TD>
+			<TD WIDTH=114>
+				<P CLASS="western"><BR>
+				</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=96>
+				<P CLASS="western"><FONT FACE="Times New Roman, serif"><B>E</B></FONT></P>
+			</TD>
+			<TD WIDTH=129>
+				<P CLASS="western"><BR>
+				</P>
+			</TD>
+			<TD WIDTH=126>
+				<P CLASS="western">E`::= v T E`</P>
+			</TD>
+			<TD WIDTH=141>
+				<P CLASS="western"><BR>
+				</P>
+			</TD>
+			<TD WIDTH=138>
+				<P CLASS="western"><BR>
+				</P>
+			</TD>
+			<TD WIDTH=114>
+				<P CLASS="western"><FONT FACE="Times New Roman, serif">E`::= </FONT><FONT FACE="Symbol, serif">&#61541;</FONT></P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=96>
+				<P CLASS="western"><FONT FACE="Times New Roman, serif"><B>T</B></FONT></P>
+			</TD>
+			<TD WIDTH=129>
+				<P CLASS="western">&#61524;&#61472;&#61498;&#61498;&#61501;&#61472;<FONT FACE="Times New Roman, serif">F
+				T`</FONT></P>
+			</TD>
+			<TD WIDTH=126>
+				<P CLASS="western"><BR>
+				</P>
+			</TD>
+			<TD WIDTH=141>
+				<P CLASS="western"><FONT FACE="Times New Roman, serif">T`::= &amp;
+				F T`</FONT></P>
+			</TD>
+			<TD WIDTH=138>
+				<P CLASS="western">&#61524;&#61472;&#61498;&#61498;&#61501;&#61472;<FONT FACE="Times New Roman, serif">F
+				T`</FONT></P>
+			</TD>
+			<TD WIDTH=114>
+				<P CLASS="western"><BR>
+				</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=96>
+				<P CLASS="western"><FONT FACE="Times New Roman, serif"><B>T</B></FONT></P>
+			</TD>
+			<TD WIDTH=129>
+				<P CLASS="western"><BR>
+				</P>
+			</TD>
+			<TD WIDTH=126>
+				<P CLASS="western"><FONT FACE="Times New Roman, serif">T`::= </FONT><FONT FACE="Symbol, serif">&#61541;</FONT></P>
+			</TD>
+			<TD WIDTH=141>
+				<P CLASS="western"><BR>
+				</P>
+			</TD>
+			<TD WIDTH=138>
+				<P CLASS="western"><BR>
+				</P>
+			</TD>
+			<TD WIDTH=114>
+				<P CLASS="western"><FONT FACE="Times New Roman, serif">T`::= </FONT><FONT FACE="Symbol, serif">&#61541;</FONT></P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=96>
+				<P CLASS="western"><FONT FACE="Times New Roman, serif"><B>F</B></FONT></P>
+			</TD>
+			<TD WIDTH=129>
+				<P CLASS="western"><FONT FACE="Times New Roman, serif">F :: id</FONT></P>
+			</TD>
+			<TD WIDTH=126>
+				<P CLASS="western"><BR>
+				</P>
+			</TD>
+			<TD WIDTH=141>
+				<P CLASS="western"><BR>
+				</P>
+			</TD>
+			<TD WIDTH=138>
+				<P CLASS="western"><FONT FACE="Times New Roman, serif">F ::= </FONT><FONT FACE="AppleGothic, DejaVu Sans">&not;</FONT>
+				F</P>
+			</TD>
+			<TD WIDTH=114>
+				<P CLASS="western"><BR>
+				</P>
+			</TD>
+		</TR>
+	</TABLE>
+</DL>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm; font-style: normal">     
+<FONT SIZE=2>Fonte: Aho; Sethi; Ullman (1995, p. 84)</FONT></P>
+<P CLASS="western" STYLE="line-height: 150%"><BR><BR>
+</P>
+<P CLASS="western" STYLE="line-height: 150%">	Tendo a senten&ccedil;a
+idvid&amp;id, podemos observar o movimento que o reconhecedor realiza
+atrav&eacute;s da tabela 3:</P>
+<P CLASS="western" STYLE="line-height: 150%"><BR><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm; font-style: normal">      
+<FONT SIZE=2>Tabela 2: Itera&ccedil;&otilde;es da an&aacute;lise
+sint&aacute;tica preditiva</FONT></P>
+<DL>
+	<DD>
+	<TABLE WIDTH=825 BORDER=1 BORDERCOLOR="#000000" CELLPADDING=7 CELLSPACING=0 STYLE="page-break-after: avoid">
+		<COL WIDTH=245>
+		<COL WIDTH=293>
+		<COL WIDTH=243>
+		<TR VALIGN=TOP>
+			<TD WIDTH=245 HEIGHT=16>
+				<P CLASS="western" ALIGN=CENTER><FONT FACE="Times New Roman, serif"><B>Pilha</B></FONT></P>
+			</TD>
+			<TD WIDTH=293>
+				<P CLASS="western" ALIGN=CENTER><FONT FACE="Times New Roman, serif"><B>Entrada</B></FONT></P>
+			</TD>
+			<TD WIDTH=243>
+				<P CLASS="western" ALIGN=CENTER><FONT FACE="Times New Roman, serif"><B>A&ccedil;&atilde;o</B></FONT></P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=245>
+				<P CLASS="western"><FONT FACE="Times New Roman, serif">$E</FONT></P>
+			</TD>
+			<TD WIDTH=293>
+				<P CLASS="western"><FONT FACE="Times New Roman, serif">id v id &amp;
+				id $</FONT></P>
+			</TD>
+			<TD WIDTH=243>
+				<P CLASS="western"><FONT FACE="Times New Roman, serif">E ::= T E</FONT></P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=245>
+				<P CLASS="western"><FONT FACE="Times New Roman, serif">$ E`T</FONT></P>
+			</TD>
+			<TD WIDTH=293>
+				<P CLASS="western"><FONT FACE="Times New Roman, serif">id v id &amp;
+				id $</FONT></P>
+			</TD>
+			<TD WIDTH=243>
+				<P CLASS="western"><FONT FACE="Times New Roman, serif">T::= F T`</FONT></P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=245>
+				<P CLASS="western"><FONT FACE="Times New Roman, serif">$ E`T`F</FONT></P>
+			</TD>
+			<TD WIDTH=293>
+				<P CLASS="western"><FONT FACE="Times New Roman, serif">id v id &amp;
+				id $</FONT></P>
+			</TD>
+			<TD WIDTH=243>
+				<P CLASS="western"><FONT FACE="Times New Roman, serif">F ::= id</FONT></P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=245>
+				<P CLASS="western"><FONT FACE="Times New Roman, serif">$ E`T`id</FONT></P>
+			</TD>
+			<TD WIDTH=293>
+				<P CLASS="western"><FONT FACE="Times New Roman, serif">id v id &amp;
+				id $</FONT></P>
+			</TD>
+			<TD WIDTH=243>
+				<P CLASS="western"><FONT FACE="Times New Roman, serif">Desempilha
+				e l&ecirc; s&iacute;mbolo</FONT></P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=245>
+				<P CLASS="western"><FONT FACE="Times New Roman, serif">$ E`T</FONT></P>
+			</TD>
+			<TD WIDTH=293>
+				<P CLASS="western">    <FONT FACE="Times New Roman, serif">v id &amp;
+				id $</FONT></P>
+			</TD>
+			<TD WIDTH=243>
+				<P CLASS="western"><FONT FACE="Times New Roman, serif">T::= </FONT><FONT FACE="Symbol, serif">&#61541;</FONT></P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=245>
+				<P CLASS="western"><FONT FACE="Times New Roman, serif">$ E</FONT></P>
+			</TD>
+			<TD WIDTH=293>
+				<P CLASS="western">   <FONT FACE="Times New Roman, serif">v id &amp;
+				id $</FONT></P>
+			</TD>
+			<TD WIDTH=243>
+				<P CLASS="western"><FONT FACE="Times New Roman, serif">E`::= v TE</FONT></P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=245>
+				<P CLASS="western"><FONT FACE="Times New Roman, serif">$ E`T v</FONT></P>
+			</TD>
+			<TD WIDTH=293>
+				<P CLASS="western">   <FONT FACE="Times New Roman, serif">v id &amp;
+				id $</FONT></P>
+			</TD>
+			<TD WIDTH=243>
+				<P CLASS="western"><FONT FACE="Times New Roman, serif">Desempilha
+				e l&ecirc; s&iacute;mbolo</FONT></P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=245>
+				<P CLASS="western"><FONT FACE="Times New Roman, serif">$ E`T</FONT></P>
+			</TD>
+			<TD WIDTH=293>
+				<P CLASS="western">      <FONT FACE="Times New Roman, serif">id &amp;
+				id $</FONT></P>
+			</TD>
+			<TD WIDTH=243>
+				<P CLASS="western"><FONT FACE="Times New Roman, serif">T ::= F T</FONT></P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=245>
+				<P CLASS="western"><FONT FACE="Times New Roman, serif">$ E`T`F</FONT></P>
+			</TD>
+			<TD WIDTH=293>
+				<P CLASS="western">      <FONT FACE="Times New Roman, serif">Id &amp;
+				id $</FONT></P>
+			</TD>
+			<TD WIDTH=243>
+				<P CLASS="western"><FONT FACE="Times New Roman, serif">F ::= id</FONT></P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=245>
+				<P CLASS="western"><FONT FACE="Times New Roman, serif">$ E` T`id</FONT></P>
+			</TD>
+			<TD WIDTH=293>
+				<P CLASS="western">      <FONT FACE="Times New Roman, serif">id &amp;
+				id $</FONT></P>
+			</TD>
+			<TD WIDTH=243>
+				<P CLASS="western"><FONT FACE="Times New Roman, serif">Desempilha
+				e l&ecirc; s&iacute;mbolo</FONT></P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=245>
+				<P CLASS="western"><FONT FACE="Times New Roman, serif">$ E`T</FONT></P>
+			</TD>
+			<TD WIDTH=293>
+				<P CLASS="western">         <FONT FACE="Times New Roman, serif">&amp;
+				id $</FONT></P>
+			</TD>
+			<TD WIDTH=243>
+				<P CLASS="western"><FONT FACE="Times New Roman, serif">T` ::= &amp;
+				F `T</FONT></P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=245>
+				<P CLASS="western"><FONT FACE="Times New Roman, serif">$ E`T`F&amp;</FONT></P>
+			</TD>
+			<TD WIDTH=293>
+				<P CLASS="western">        <FONT FACE="Times New Roman, serif">&amp;
+				id $</FONT></P>
+			</TD>
+			<TD WIDTH=243>
+				<P CLASS="western"><FONT FACE="Times New Roman, serif">Desempilha
+				e l&ecirc; s&iacute;mbolo</FONT></P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=245>
+				<P CLASS="western"><FONT FACE="Times New Roman, serif">$E`T`F</FONT></P>
+			</TD>
+			<TD WIDTH=293>
+				<P CLASS="western">            <FONT FACE="Times New Roman, serif">id
+				$</FONT></P>
+			</TD>
+			<TD WIDTH=243>
+				<P CLASS="western"><FONT FACE="Times New Roman, serif">F ::= id</FONT></P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=245>
+				<P CLASS="western"><FONT FACE="Times New Roman, serif">$E`T`id </FONT>
+				</P>
+			</TD>
+			<TD WIDTH=293>
+				<P CLASS="western">            <FONT FACE="Times New Roman, serif">id
+				$</FONT></P>
+			</TD>
+			<TD WIDTH=243>
+				<P CLASS="western"><FONT FACE="Times New Roman, serif">Desempilha
+				e l&ecirc; s&iacute;mbolo</FONT></P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=245>
+				<P CLASS="western"><FONT FACE="Times New Roman, serif">$ E`T</FONT></P>
+			</TD>
+			<TD WIDTH=293>
+				<P CLASS="western">                <FONT FACE="Times New Roman, serif">$</FONT></P>
+			</TD>
+			<TD WIDTH=243>
+				<P CLASS="western"><FONT FACE="Times New Roman, serif">T`::= </FONT><FONT FACE="Symbol, serif">&#61541;</FONT></P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=245>
+				<P CLASS="western"><FONT FACE="Times New Roman, serif">$E</FONT></P>
+			</TD>
+			<TD WIDTH=293>
+				<P CLASS="western">                <FONT FACE="Times New Roman, serif">$</FONT></P>
+			</TD>
+			<TD WIDTH=243>
+				<P CLASS="western"><FONT FACE="Times New Roman, serif">E`::= </FONT><FONT FACE="Symbol, serif">&#61541;</FONT></P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=245>
+				<P CLASS="western"><FONT FACE="Times New Roman, serif">$</FONT></P>
+			</TD>
+			<TD WIDTH=293>
+				<P CLASS="western">                <FONT FACE="Times New Roman, serif">$</FONT></P>
+			</TD>
+			<TD WIDTH=243>
+				<P CLASS="western"><FONT FACE="Times New Roman, serif">Aceita a
+				senten&ccedil;a!</FONT></P>
+			</TD>
+		</TR>
+	</TABLE>
+</DL>
+<P ALIGN=LEFT STYLE="margin-bottom: 0cm; font-style: normal">     
+<FONT SIZE=2>Fonte: Aho; Sethi; Ullman (1995, p. 84)</FONT></P>
+<P CLASS="western"><BR><BR>
+</P>
+<P CLASS="western" STYLE="line-height: 150%">	Primeiramente, o
+cabe&ccedil;ote aponta para o s&iacute;mbolo mais a esquerda da
+senten&ccedil;a de entrada, pode se observar que as a&ccedil;&otilde;es
+que foram produzidas pelo reconhecedor, s&atilde;o produ&ccedil;&otilde;es
+usadas pela an&aacute;lise que constitui uma deriva&ccedil;&atilde;o
+mais a esquerda da senten&ccedil;a.</P>
+<P CLASS="western" STYLE="line-height: 150%"><BR><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; line-height: 150%"><IMG SRC="analise_sintatica_ll_html_m637a0871.gif" ALIGN=MIDDLE>
+<A HREF="Indice.html">Voltar &Iacute;ndice</A></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; line-height: 150%"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; line-height: 150%"><BR>
+</P>
+</BODY>
+</HTML>
