@@ -1,0 +1,285 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="BrOffice.org 2.4  (Win32)">
+	<META NAME="AUTHOR" CONTENT="Karina Kieling">
+	<META NAME="CREATED" CONTENT="20081004;20210300">
+	<META NAME="CHANGEDBY" CONTENT="Karina Kieling">
+	<META NAME="CHANGED" CONTENT="20081101;22485057">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { margin: 2cm }
+		P { margin-bottom: 0.21cm }
+		P.western { so-language: pt-BR }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="pt-BR" DIR="LTR">
+<P STYLE="margin-bottom: 0cm; line-height: 150%"></P>
+<P STYLE="margin-bottom: 0cm; line-height: 150%"></P>
+<P STYLE="margin-bottom: 0cm; line-height: 150%"><B>SIMPLICA&Ccedil;&Otilde;ES
+DE GRAM&Aacute;TICAS LIVRES DE CONTEXTO</B></P>
+<P CLASS="western"><BR><BR>
+</P>
+<P STYLE="margin-bottom: 0cm; line-height: 150%"><B>Elimina&ccedil;&atilde;o
+de s&iacute;mbolos in&uacute;teis</B></P>
+<P CLASS="western" STYLE="line-height: 150%"><BR><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%">	S&iacute;mbolos
+in&uacute;teis s&atilde;o aqueles que n&atilde;o s&atilde;o &uacute;teis
+para a <A HREF="gramatica.html">gram&aacute;tica</A>, ou seja, se
+forem removidos da gram&aacute;tica, n&atilde;o alterar&atilde;o o
+seu comportamento nem as linguagens geradas por ela. Os <A HREF="conceitos%20basicos.html">s&iacute;mbolos</A>
+in&uacute;teis s&atilde;o basicamente dois tipos, s&iacute;mbolos
+n&atilde;o-geradores e s&iacute;mbolos inalcan&ccedil;&aacute;veis.
+Para que sejam removidos os s&iacute;mbolos in&uacute;teis de uma
+gram&aacute;tica, devem ser removidos, primeiramente, os s&iacute;mbolos
+n&atilde;o-geradores, para ent&atilde;o os inalcan&ccedil;&aacute;veis.</P>
+<P CLASS="western" STYLE="line-height: 150%"><BR><BR>
+</P>
+<P STYLE="margin-bottom: 0cm; font-weight: medium; line-height: 150%">
+S&iacute;mbolos geradores</P>
+<P CLASS="western" STYLE="line-height: 150%"><BR><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%">	Um
+s&iacute;mbolo &eacute; considerado gerador, quando, a partir de
+alguma de suas produ&ccedil;&otilde;es,  &eacute; poss&iacute;vel
+gerar uma cadeia contendo apenas terminais, ou seja, existe alguma
+deriva&ccedil;&atilde;o de seus produ&ccedil;&otilde;es que resulte
+em uma cadeia de terminais. Os terminais, portanto, sempre s&atilde;o
+geradores e si mesmos. 
+</P>
+<P CLASS="western" ALIGN=JUSTIFY><BR><BR>
+</P>
+<P CLASS="western">		&lt;A&gt; ::= &lt;B&gt; &lt;C&gt; | &lt;C&gt;;</P>
+<P CLASS="western">		&lt;C&gt; ::= &ldquo;abc&rdquo;;</P>
+<P CLASS="western" STYLE="line-height: 150%"><BR><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%">	Nesta
+gram&aacute;tica, podemos concluir que o terminal &ldquo;abc&rdquo; &eacute;
+gerador de si mesmo. O n&atilde;o-terminal &lt;C&gt;, como ele pode
+ser derivado para &ldquo;abc&rdquo;, &eacute; gerador tamb&eacute;m.
+Como existe uma regra para &lt;A&gt; que deriva para &lt;C&gt;, &lt;A&gt;
+&eacute; gerador, mas sua outra produ&ccedil;&atilde;o, &lt;B&gt;
+&lt;C&gt;, n&atilde;o &eacute; geradora, pois &lt;B&gt; n&atilde;o
+pode ser derivado para terminais. Logo, a gram&aacute;tica pode ser
+modificada removendo-se as produ&ccedil;&otilde;es e s&iacute;mbolos
+n&atilde;o-geradores:</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%"><BR><BR>
+</P>
+<P CLASS="western">		&lt;A&gt; ::= &lt;C&gt;;</P>
+<P CLASS="western">		&lt;C&gt; ::= &ldquo;abc&rdquo;;</P>
+<P CLASS="western" STYLE="line-height: 150%"><BR><BR>
+</P>
+<P STYLE="margin-bottom: 0cm; font-weight: medium; line-height: 150%">
+S&iacute;mbolos alcan&ccedil;&aacute;veis</P>
+<P CLASS="western" STYLE="line-height: 150%"><BR><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%">	S&iacute;mbolos
+s&atilde;o considerados alcan&ccedil;&aacute;veis, quando, a partir
+do s&iacute;mbolo inicial de uma gram&aacute;tica, existe uma
+deriva&ccedil;&atilde;o em que ele esteja no corpo, ou seja, ele pode
+ser alcan&ccedil;ado a partir do s&iacute;mbolo inicial. Logo, se ele
+n&atilde;o pode ser alcan&ccedil;ado, ele n&atilde;o &eacute; &uacute;til
+para a gram&aacute;tica, pois nunca poder&aacute; ser acessado.</P>
+<P CLASS="western"><BR><BR>
+</P>
+<P CLASS="western">		&lt;A&gt; ::= &ldquo;a&rdquo; | &lt;B&gt;;</P>
+<P CLASS="western">		&lt;B&gt; ::= &ldquo;b&rdquo; | &lt;A&gt; &lt;B&gt;;</P>
+<P CLASS="western">		&lt;C&gt; ::= &ldquo;c&rdquo; | &lt;A&gt; &lt;B&gt;
+&lt;C&gt;;</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%"><BR><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%">	Nesta
+gram&aacute;tica, partindo do s&iacute;mbolo inicial &lt;A&gt;, &eacute;
+poss&iacute;vel alcan&ccedil;ar os seguintes s&iacute;mbolos: &ldquo;a&rdquo;,
+&lt;B&gt; e &ldquo;b&rdquo;. Mas o n&atilde;o-terminal &lt;C&gt;
+nunca ser&aacute; alcan&ccedil;ado, logo &lt;C&gt; e &ldquo;c&rdquo;,
+que s&oacute; pode ser alcan&ccedil;ado a partir de &lt;C&gt;, que &eacute;
+inalcan&ccedil;&aacute;vel, tamb&eacute;m o &eacute;. A gram&aacute;tica,
+pode portanto, ter o mesmo efeito sem as produ&ccedil;&otilde;es de
+&lt;C&gt;:</P>
+<P CLASS="western"><BR><BR>
+</P>
+<P CLASS="western">		&lt;A&gt; ::= &ldquo;a&rdquo; | &lt;B&gt;;</P>
+<P CLASS="western">		&lt;B&gt; ::= &ldquo;b&rdquo; | &lt;A&gt; &lt;B&gt;;</P>
+<P CLASS="western"><BR><BR>
+</P>
+<P STYLE="margin-bottom: 0cm; line-height: 150%"><B>Elimina&ccedil;&atilde;o
+de produ&ccedil;&otilde;es unit&aacute;rias</B></P>
+<P CLASS="western"><BR><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%">	Produ&ccedil;&otilde;es
+unit&aacute;rias s&atilde;o aquelas do tipo &lt;A&gt; ::= &lt;B&gt;,
+onde uma produ&ccedil;&atilde;o possui em seu corpo, apenas um
+s&iacute;mbolo n&atilde;o-terminal, diretamente, ou atrav&eacute;s de
+alguma deriva&ccedil;&atilde;o. Esse tipo de produ&ccedil;&atilde;o
+exigem passo a mais em uma deriva&ccedil;&atilde;o, o que, em muitos
+casos pode ser removido.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%"><BR><BR>
+</P>
+<P CLASS="western">		&lt;A&gt; ::= &lt;B&gt; &lt;C&gt;;</P>
+<P CLASS="western">		&lt;B&gt; ::= &lt;D&gt;;</P>
+<P CLASS="western">		&lt;C&gt; ::= &lt;A&gt; &lt;C&gt; | &ldquo;abc&rdquo;;</P>
+<P CLASS="western">		&lt;D&gt; ::= &ldquo;abcd&rdquo;;</P>
+<P CLASS="western"><BR><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%">	Na
+gram&aacute;tica apresentada, a segunda produ&ccedil;&atilde;o, &lt;B&gt;
+::= &lt;D&gt;, &eacute; uma produ&ccedil;&atilde;o unit&aacute;ria.
+Para remov&ecirc;-la, &eacute; necess&aacute;rio que todas as
+ocorr&ecirc;ncias de &lt;B&gt; sejam substitu&iacute;das pelo seu
+corpo, &lt;D&gt;. A remo&ccedil;&atilde;o dela na gram&aacute;tica
+resultaria em:</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%"><BR><BR>
+</P>
+<P CLASS="western">		&lt;A&gt; ::= &lt;D&gt; &lt;C&gt;;</P>
+<P CLASS="western">		&lt;C&gt; ::= &lt;A&gt; &lt;C&gt; | &ldquo;abc&rdquo;;</P>
+<P CLASS="western">		&lt;D&gt; ::= &ldquo;abcd&rdquo;;</P>
+<P CLASS="western"><BR><BR>
+</P>
+<P CLASS="western">	Outro exemplo:</P>
+<P CLASS="western"><BR><BR>
+</P>
+<P CLASS="western">		&lt;A&gt; ::= &lt;B&gt; &lt;C&gt; | &lt;D&gt;;</P>
+<P CLASS="western">		&lt;B&gt; ::= &lt;D&gt;;</P>
+<P CLASS="western">		&lt;C&gt; ::= &ldquo;abc&rdquo;;</P>
+<P CLASS="western">		&lt;D&gt; ::= &ldquo;abcd&rdquo;;</P>
+<P CLASS="western"><BR><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY>	Existem duas produ&ccedil;&otilde;es
+unit&aacute;rias na gram&aacute;tica apresentada, &lt;A&gt; ::= &lt;D&gt;
+e &lt;B&gt; ::= &lt;D&gt;, e elas podem ser removidas:</P>
+<P CLASS="western"><BR><BR>
+</P>
+<P LANG="en-US" CLASS="western">		&lt;A&gt; ::= &lt;D&gt; &lt;C&gt; |
+&ldquo;abcd&rdquo;;</P>
+<P LANG="en-US" CLASS="western">		&lt;C&gt; ::= &ldquo;abc&rdquo;;</P>
+<P CLASS="western">		&lt;D&gt; ::= &ldquo;abcd&rdquo;;</P>
+<P CLASS="western"><BR><BR>
+</P>
+<P CLASS="western" STYLE="line-height: 150%">	Muitas vezes, algumas
+produ&ccedil;&otilde;es unit&aacute;rias podem ser &uacute;teis para
+uma melhor organiza&ccedil;&atilde;o da gram&aacute;tica, ou para
+evitar redund&acirc;ncias, por isso, nem sempre a sua remo&ccedil;&atilde;o
+vai resultar em uma gram&aacute;tica leg&iacute;vel para o leitor.</P>
+<P CLASS="western" STYLE="line-height: 150%"><BR><BR>
+</P>
+<P STYLE="margin-bottom: 0cm; line-height: 150%"><B>Elimina&ccedil;&atilde;o
+de <FONT FACE="Symbol, serif">&#61541;</FONT>-produ&ccedil;&otilde;es</B></P>
+<P CLASS="western"><BR><BR>
+</P>
+<P CLASS="western" STYLE="line-height: 150%">	As <FONT FACE="Symbol, serif">&#61541;</FONT>-produ&ccedil;&otilde;es
+s&atilde;o aquelas que possuem em seu corpo uma cadeia vazia, na
+forma de &lt;A&gt; ::= <FONT FACE="Symbol, serif">&#61541;</FONT>.
+Mesmo que em algumas gram&aacute;ticas elas sejam uma conveni&ecirc;ncia,
+melhorando a organiza&ccedil;&atilde;o, elas n&atilde;o s&atilde;o
+essenciais (HOPCROFT; ULLMAN; MOTWANI, 2003). 
+</P>
+<P CLASS="western" STYLE="line-height: 150%"><BR><BR>
+</P>
+<P CLASS="western">		&lt;A&gt; ::= &lt;B&gt; &lt;C&gt; | &ldquo;a&rdquo;;</P>
+<P CLASS="western">		&lt;B&gt; ::= &ldquo;b&rdquo; | <FONT FACE="Symbol, serif">&#61541;</FONT>;</P>
+<P CLASS="western">		&lt;C&gt; ::= &ldquo;c&rdquo;;</P>
+<P CLASS="western"><BR><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%">	Na GLC
+apresentada, existe uma <FONT FACE="Symbol, serif">&#61541;</FONT>-produ&ccedil;&atilde;o,
+&lt;B&gt; ::= <FONT FACE="Symbol, serif">&#61541;</FONT>. Para
+remov&ecirc;-la, em toda ocorr&ecirc;ncia de &lt;B&gt; no lado
+direito das produ&ccedil;&otilde;es, adicionaremos uma regra
+alternativa que n&atilde;o contenha &lt;B&gt;. A &uacute;nica
+ocorr&ecirc;ncia de &lt;B&gt; est&aacute; em &lt;A&gt; ::= &lt;B&gt;
+&lt;C&gt;, que pode ser desmembrada em duas, com e sem &lt;B&gt;, j&aacute;
+que &lt;B&gt; leva a cadeia vazia:</P>
+<P CLASS="western"><BR><BR>
+</P>
+<P CLASS="western">		&lt;A&gt; ::= &lt;B&gt; &lt;C&gt; | &lt;C&gt; |
+&ldquo;a&rdquo;;</P>
+<P CLASS="western">		&lt;B&gt; ::= &ldquo;b&rdquo;;</P>
+<P CLASS="western">		&lt;C&gt; ::= &ldquo;c&rdquo;;</P>
+<P CLASS="western"><BR><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%">	A
+gram&aacute;tica resultante gera as mesmas linguagens que
+anteriormente. E agora ela apresenta uma produ&ccedil;&atilde;o
+unit&aacute;ria, &lt;A&gt; ::= &lt;C&gt;, que poderia ser removida.</P>
+<P CLASS="western"><BR><BR>
+</P>
+<P STYLE="margin-bottom: 0cm; line-height: 150%"><B>Recurs&atilde;o &agrave;
+esquerda</B></P>
+<P CLASS="western"><BR><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%">	Recurs&atilde;o
+&agrave; esquerda ocorre quando, em uma produ&ccedil;&atilde;o de um
+n&atilde;o-terminal, o primeiro s&iacute;mbolo, ou seja, aquele mais
+&agrave; esquerda, &eacute; o mesmo n&atilde;o terminal, como em &lt;A&gt;
+::= &lt;A&gt; &lt;B&gt;, ou pode ocorrer indiretamente quando alguma
+de duas deriva&ccedil;&otilde;es resulta em recurs&atilde;o &agrave;
+esquerda. Em alguns algoritmos de an&aacute;lise sint&aacute;tica,
+que ser&atilde;o vistos nas pr&oacute;ximas se&ccedil;&otilde;es,
+isso pode resultar em um loop infinito, ao se derivar sempre o
+s&iacute;mbolo mais &agrave; esquerda.</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%"><BR><BR>
+</P>
+<P CLASS="western">		&lt;A&gt; ::= &lt;A&gt; &lt;B&gt; | &lt;C&gt;
+&ldquo;a&rdquo;;</P>
+<P CLASS="western">		&lt;B&gt; ::= &ldquo;b&rdquo;;</P>
+<P CLASS="western">		&lt;C&gt; ::= &ldquo;c&rdquo;;</P>
+<P CLASS="western"><BR><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="line-height: 150%">	A
+gram&aacute;tica acima possui uma recurs&atilde;o &agrave; esquerda
+em &lt;A&gt; ::= &lt;A&gt; &lt;B&gt;, que pode ser removida da
+gram&aacute;tica, transformando-a em recurs&atilde;o &agrave;
+direita. Para isto, a gram&aacute;tica pode ser reescrita como:</P>
+<P CLASS="western"><BR><BR>
+</P>
+<P CLASS="western">		&lt;A&gt; ::= &lt;C&gt; &ldquo;a&rdquo; &lt;A&gt;
+| &lt;C&gt; &ldquo;a&rdquo; &lt;B&gt;;</P>
+<P CLASS="western">		&lt;B&gt; ::= &ldquo;b&rdquo;;</P>
+<P CLASS="western">		&lt;C&gt; ::= &ldquo;c&rdquo;;</P>
+<P CLASS="western" STYLE="line-height: 150%"><BR><BR>
+</P>
+<P CLASS="western" STYLE="line-height: 150%">	Que gera a mesma
+linguagem que antes das altera&ccedil;&otilde;es. Segundo Aho, Sethi
+e Ullman (1995) , recurs&atilde;o &agrave; esquerda pode ser
+transformada em recurs&atilde;o &agrave; direita de maneira gen&eacute;rica,
+considerando uma regra &lt;A&gt; :: &lt;A&gt; <FONT FACE="Symbol, serif">&#61537;&#61472;&#61564;&#61472;&#61538;</FONT>,
+onde  <FONT FACE="Symbol, serif">&#61537;&#61472;</FONT>e<FONT FACE="Symbol, serif">&#61472;&#61538;&#61472;</FONT>s&atilde;o
+quaisquer cadeias de terminais e/ou n&atilde;o-terminais, utilizando
+o teorema:</P>
+<P CLASS="western"><BR><BR>
+</P>
+<P CLASS="western">		&lt;A&gt; ::=  <FONT FACE="Symbol, serif">&#61538;&#61472;</FONT>&lt;A'&gt;;</P>
+<P CLASS="western">		&lt;A'&gt; ::= <FONT FACE="Symbol, serif">&#61537;</FONT>
+&lt;A'&gt; | <FONT FACE="Symbol, serif">&#61541;</FONT>;</P>
+<P CLASS="western" STYLE="line-height: 150%"><BR><BR>
+</P>
+<P CLASS="western" STYLE="line-height: 150%">	Onde &lt;A'&gt; &eacute;
+um n&atilde;o-terminal auxiliar, criado para eliminar a recurs&atilde;o
+&agrave; esquerda. Este teorema poderia ter sido utilizado na
+gram&aacute;tica anterior, o que resultaria em:</P>
+<P CLASS="western"><BR><BR>
+</P>
+<P CLASS="western">		&lt;A&gt; ::= &lt;C&gt; &ldquo;a&rdquo; &lt;A'&gt;;</P>
+<P CLASS="western">		&lt;A'&gt; ::= &lt;B&gt; &lt;A'&gt; | <FONT FACE="Symbol, serif">&#61541;</FONT>;</P>
+<P CLASS="western">		&lt;B&gt; ::= &ldquo;b&rdquo;;</P>
+<P CLASS="western">		&lt;C&gt; ::= &ldquo;c&rdquo;;</P>
+<P CLASS="western"><BR><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY>	Este teorema pode eliminar a
+maioria dos casos de recurs&atilde;o &agrave; esquerda, apenas n&atilde;o
+se aplica a recursividade indireta.</P>
+<P CLASS="western" ALIGN=JUSTIFY><BR><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY><BR><BR>
+</P>
+<P CLASS="western" ALIGN=JUSTIFY STYLE="margin-bottom: 0cm"><IMG SRC="simplificacao_glc_html_m637a0871.gif" ALIGN=MIDDLE>
+<A HREF="Indice.html">Voltar &Iacute;ndice</A></P>
+<P CLASS="western"><BR><BR>
+</P>
+</BODY>
+</HTML>
