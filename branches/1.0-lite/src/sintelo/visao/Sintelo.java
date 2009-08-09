@@ -326,7 +326,6 @@ public class Sintelo extends javax.swing.JFrame {
         btnSimulaLexico = new javax.swing.JButton();
         btnSimulacao = new javax.swing.JButton();
         jToolBar4 = new javax.swing.JToolBar();
-        btnManual = new javax.swing.JButton();
         btnSobre = new javax.swing.JButton();
         jScrollPane3 = new javax.swing.JScrollPane();
         txtMensagens = new javax.swing.JTextPane();
@@ -361,8 +360,6 @@ public class Sintelo extends javax.swing.JFrame {
         miGeracao = new javax.swing.JMenuItem();
         miRemoverInuteis = new javax.swing.JMenuItem();
         menuAjuda = new javax.swing.JMenu();
-        miAjuda = new javax.swing.JMenuItem();
-        miTutorial = new javax.swing.JMenuItem();
         miSobre = new javax.swing.JMenuItem();
 
         jPopupMenu2.setToolTipText("Simulação");
@@ -483,18 +480,6 @@ public class Sintelo extends javax.swing.JFrame {
         jToolBar4.setRollover(true);
         jToolBar1.add(jToolBar4);
 
-        btnManual.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sintelo/visao/imagens/helpcenter.png"))); // NOI18N
-        btnManual.setToolTipText("Manual");
-        btnManual.setFocusable(false);
-        btnManual.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnManual.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        btnManual.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnManualActionPerformed(evt);
-            }
-        });
-        jToolBar1.add(btnManual);
-
         btnSobre.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sintelo/visao/imagens/ajudar2.png"))); // NOI18N
         btnSobre.setToolTipText("Sobre");
         btnSobre.setFocusable(false);
@@ -551,7 +536,7 @@ public class Sintelo extends javax.swing.JFrame {
         jScrollPane2.setMinimumSize(new java.awt.Dimension(150, 150));
         jScrollPane2.setPreferredSize(new java.awt.Dimension(300, 250));
 
-        txtSintatico.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        txtSintatico.setFont(new java.awt.Font("Dialog", 0, 14));
         txtSintatico.setMaximumSize(new java.awt.Dimension(250, 450));
         txtSintatico.setMinimumSize(new java.awt.Dimension(150, 150));
         txtSintatico.setPreferredSize(new java.awt.Dimension(300, 250));
@@ -687,22 +672,6 @@ public class Sintelo extends javax.swing.JFrame {
         jMenuBar2.add(menuFerramentas);
 
         menuAjuda.setText("Ajuda");
-
-        miAjuda.setText("Ajuda");
-        miAjuda.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                miAjudaActionPerformed(evt);
-            }
-        });
-        menuAjuda.add(miAjuda);
-
-        miTutorial.setText("Manual");
-        miTutorial.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                miTutorialActionPerformed(evt);
-            }
-        });
-        menuAjuda.add(miTutorial);
 
         miSobre.setText("Sobre");
         miSobre.addActionListener(new java.awt.event.ActionListener() {
@@ -857,18 +826,6 @@ public class Sintelo extends javax.swing.JFrame {
         mostraSobre();
     }//GEN-LAST:event_miSobreActionPerformed
 
-    private void btnManualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManualActionPerformed
-        abreManual();
-}//GEN-LAST:event_btnManualActionPerformed
-
-    private void miTutorialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miTutorialActionPerformed
-        abreManual();
-    }//GEN-LAST:event_miTutorialActionPerformed
-
-    private void miAjudaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miAjudaActionPerformed
-        abreAjuda();
-    }//GEN-LAST:event_miAjudaActionPerformed
-
     /**
     * @param args the command line arguments
     */
@@ -884,7 +841,6 @@ public class Sintelo extends javax.swing.JFrame {
     private javax.swing.JButton btnAbrir;
     private javax.swing.JButton btnExtraiTokens;
     private javax.swing.JButton btnGeracao;
-    private javax.swing.JButton btnManual;
     private javax.swing.JButton btnNovo;
     private javax.swing.JButton btnRemoveInuteis;
     private javax.swing.JButton btnSalvar;
@@ -913,7 +869,6 @@ public class Sintelo extends javax.swing.JFrame {
     private javax.swing.JMenu menuArquivo;
     private javax.swing.JMenu menuFerramentas;
     private javax.swing.JMenuItem miAbrir;
-    private javax.swing.JMenuItem miAjuda;
     private javax.swing.JMenuItem miExtrairTokens;
     private javax.swing.JMenuItem miFirstFollow;
     private javax.swing.JMenuItem miGeracao;
@@ -929,7 +884,6 @@ public class Sintelo extends javax.swing.JFrame {
     private javax.swing.JMenuItem miSobre;
     private javax.swing.JMenuItem miTabParse;
     private javax.swing.JMenuItem miTabelaTransicao;
-    private javax.swing.JMenuItem miTutorial;
     private javax.swing.JTextPane txtLexico;
     private javax.swing.JTextPane txtMensagens;
     private javax.swing.JTextPane txtSintatico;
