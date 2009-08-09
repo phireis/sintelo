@@ -52,7 +52,7 @@
             <Property name="columns" type="int" value="20"/>
             <Property name="editable" type="boolean" value="false"/>
             <Property name="rows" type="int" value="5"/>
-            <Property name="text" type="java.lang.String" value="&#xa;v. 1.0.0&#xa;&#xa;Karina Kieling dos Santos&#xa;Philipe Marcon dos Reis&#xa;&#xa;Orientador: Luiz Alfredo Soares Garcindo, Dr.&#xa;Curso de Ci&#xea;ncia da Computa&#xe7;&#xe3;o&#xa;UNISUL - Universidade do Sul de Santa Catarina"/>
+            <Property name="text" type="java.lang.String" value="&#xa;v. 1.0.0-lite&#xa;&#xa;Karina Kieling dos Santos&#xa;Philipe Marcon dos Reis&#xa;&#xa;Orientador: Luiz Alfredo Soares Garcindo, Dr.&#xa;Curso de Ci&#xea;ncia da Computa&#xe7;&#xe3;o&#xa;UNISUL - Universidade do Sul de Santa Catarina"/>
             <Property name="disabledTextColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
